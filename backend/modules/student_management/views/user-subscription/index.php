@@ -35,16 +35,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
 
                     'id',
-                    'user_id',
+                    ['attribute'=>'user_id', 'label'=>'Parent' ],
                     'subscription_id',
-                    'student_id',
-                    'subject_id',
-                    // 'fee',
-                    // 'status',
-                    // 'expiry_date',
-                    // 'created_by',
+                    // 'student_id' //OSB: add this later
+                    // 'subject_id', //OSB: add this later
+                    ['attribute'=>'fee', 'label'=>'Payment Amount' ],
+                    'status:statuslabel',
+                    'expiry_date:date',
+                    // 'created_by', //OSB: add this later
                     // 'updated_by',
-                    // 'created_at',
+                    'created_at:date',
                     // 'updated_at',
                     
                     ['class' => \common\widgets\ActionColumn::class],

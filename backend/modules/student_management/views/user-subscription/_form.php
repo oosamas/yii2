@@ -16,7 +16,6 @@ use yii\bootstrap4\ActiveForm;
             <div class="card-body">
                 <?php echo $form->errorSummary($model); ?>
 
-                <?php echo $form->field($model, 'id')->textInput() ?>
                 <?php echo $form->field($model, 'user_id')->textInput() ?>
                 <?php echo $form->field($model, 'subscription_id')->textInput() ?>
                 <?php echo $form->field($model, 'student_id')->textInput() ?>
@@ -24,10 +23,10 @@ use yii\bootstrap4\ActiveForm;
                 <?php echo $form->field($model, 'fee')->textInput() ?>
                 <?php echo $form->field($model, 'status')->textInput() ?>
                 <?php echo $form->field($model, 'expiry_date')->textInput() ?>
-                <?php echo $form->field($model, 'created_by')->textInput() ?>
-                <?php echo $form->field($model, 'updated_by')->textInput() ?>
-                <?php echo $form->field($model, 'created_at')->textInput() ?>
-                <?php echo $form->field($model, 'updated_at')->textInput() ?>
+                <?php // echo $form->field($model, 'created_by')->textInput() ?>
+                <?php // echo $form->field($model, 'updated_by')->textInput() ?>
+                <?php //echo $form->field($model, 'created_at')->textInput() ?>
+                <?php //echo $form->field($model, 'updated_at')->textInput() ?>
                 
             </div>
             <div class="card-footer">
