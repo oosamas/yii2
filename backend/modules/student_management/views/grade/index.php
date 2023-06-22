@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id',
                     'title',
                     'description:ntext',
-                    'status',
+                    ['attribute' => 'status', 'value' => function($model){return $model->status == 1 ? 'Active' : 'Inactive';}],
                     // 'created_by',
                     // 'updated_by',
                     // 'created_at',
