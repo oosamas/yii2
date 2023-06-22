@@ -72,7 +72,7 @@ class StudentController extends Controller
         return $this->render('create', [
             'model' => $model,
             'grades' => Grade::find()->all(),
-            'user_profiles' => UserProfile::find()->all(),
+            'user_profile' => UserProfile::find()->all(),
         ]);
     }
 
