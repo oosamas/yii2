@@ -1,7 +1,10 @@
 <?php
 
+use app\models\Subject;
+use backend\modules\student_management\models\Grade;
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
 
 /**
  * @var yii\web\View $this
@@ -35,17 +38,25 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
 
                     'id',
-                    'parent_id',
+                    ['attribute' => 'parent_id', 'label' => 'Parent',
+                     'value' => function($model){
+                      return $model->parent->username;},
+                    ],
                     'full_name',
-                    'grade.description',
-                    //'points', //OSB: add points to student class
+                    ['attribute' => 'grade_id', 'label' => 'Grade', 
+                    'value' => function($model){
+                        return $model->grade->description;
+                    },
+                    'filter' => ArrayHelper::map(Grade::find()->all(), 'id', 'title'),],
+
+                //'points', //OSB: add points to student class
                     // 'grade_id',
-                    // 'live_support',
-                    'status',
+                    // 'live_support', //OSB: add live support
+                    ['attribute' => 'status', 'value' => function($model){return $model->status == 1 ? 'Active' : 'Inactive';}],
                     // 'created_by',
                     // 'updated_by',
                     // 'updated_at',
-                    'created_at',
+                    'created_at:date',
                     
                     ['class' => \common\widgets\ActionColumn::class],
                 ],

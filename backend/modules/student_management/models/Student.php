@@ -1,8 +1,13 @@
 <?php
 
 namespace backend\modules\student_management\models;
+use webvimark\modules\UserManagement\models\User;
+use backend\modules\UserManagement\models\ParentUser;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\SluggableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "student".
@@ -37,6 +42,14 @@ class Student extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+
+     public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+        ];
+    }
     public function rules()
     {
         return [
@@ -97,5 +110,10 @@ class Student extends \yii\db\ActiveRecord
     public function getPoints()
     {
         return $this->hasMany(Points::className(), ['student_id' => 'id']);
+    }
+
+    public function getParent()
+    {
+        return $this->hasOne(ParentUser::className(), ['id' => 'parent_id']);
     }
 }

@@ -3,6 +3,10 @@
 namespace backend\modules\student_management\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\SluggableBehavior;
+use yii\behaviors\TimestampBehavior;
+
 
 /**
  * This is the model class for table "points".
@@ -35,6 +39,15 @@ class Points extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+
+     public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+        ];
+    }
+
     public function rules()
     {
         return [

@@ -32,7 +32,7 @@ use yii\behaviors\TimestampBehavior;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Saleuser 
+class ParentUser
     extends \webvimark\modules\UserManagement\models\User
 {
 	public $user_student_id;
@@ -60,6 +60,11 @@ class Saleuser
 			// }
         parent::afterSave($insert, $changedAttributes);
         
+    }
+
+    public function getUserProfile()
+    {
+        return $this->hasOne(UserProfile::className(), ['user_id' => 'id']);
     }
 	
 }

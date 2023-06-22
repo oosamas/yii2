@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'student_id',
                     'details:ntext',
                     'is_redempt',
-                    [$form->field($model, 'redemption_date')->textInput()],
+                    // [$form->field($model, 'redemption_date')->textInput()],
                     // 'reason:ntext',
                     // 'redemption_date',
                     // 'status',

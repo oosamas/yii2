@@ -3,6 +3,10 @@
 namespace backend\modules\student_management\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\SluggableBehavior;
+use yii\behaviors\TimestampBehavior;
+
 
 /**
  * This is the model class for table "payment".
@@ -34,7 +38,14 @@ class Payment extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function rules()
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+        ];
+    }
+     public function rules()
     {
         return [
             [['user_id', 'subscription_id', 'user_subscription_id', 'amount', 'status'], 'required'],
