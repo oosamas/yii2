@@ -5,14 +5,14 @@ use yii\widgets\DetailView;
 
 /**
  * @var yii\web\View $this
- * @var backend\modules\student_management\models\Grade $model
+ * @var backend\modules\student_management\models\UserSubscription $model
  */
 
-$this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Grades', 'url' => ['index']];
+$this->title = $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'User Subscriptions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="grade-view">
+<div class="user-subscription-view">
     <div class="card">
         <div class="card-header">
             <?php echo Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -29,13 +29,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 'model' => $model,
                 'attributes' => [
                     'id',
-                    'title',
-                    'description:ntext',
-                    ['attribute' => 'status', 'value' => function($model){return $model->status == 1 ? 'Active' : 'Inactive';}],
-                    // 'created_by',
-                    // 'updated_by',
-                    // 'created_at',
-                    // 'updated_at',
+                    'user_id',
+                    'subscription_id',
+                    'student_id',
+                    'subject_id',
+                    'fee',
+                    'status',
+                    'expiry_date',
+                    'created_by',
+                    'updated_by',
+                    'created_at',
+                    'updated_at',
                     
                 ],
             ]) ?>

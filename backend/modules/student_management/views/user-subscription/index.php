@@ -5,17 +5,17 @@ use yii\grid\GridView;
 
 /**
  * @var yii\web\View $this
- * @var backend\modules\student_management\models\search\SubscriptionSearch $searchModel
+ * @var backend\modules\student_management\models\search\UserSubscription $searchModel
  * @var yii\data\ActiveDataProvider $dataProvider
  */
 
-$this->title = 'Subscriptions/Packages';
+$this->title = 'User Subscriptions';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="subscription-index">
+<div class="user-subscription-index">
     <div class="card">
         <div class="card-header">
-            <?php echo Html::a('Create Subscription', ['create'], ['class' => 'btn btn-success']) ?>
+            <?php echo Html::a('Create User Subscription', ['create'], ['class' => 'btn btn-success']) ?>
         </div>
 
         <div class="card-body p-0">
@@ -35,12 +35,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
 
                     'id',
-                    'title',
-                    'fee:decimal',
-                    ['attribute' => 'live_support', 'value' => function($model){return $model->status == 1 ? 'Yes' : 'No';}],
-                    'fee_type',
-                    // 'duration',
-                    ['attribute' => 'status', 'value' => function($model){return $model->status == 1 ? 'Active' : 'Inactive';}],
+                    'user_id',
+                    'subscription_id',
+                    'student_id',
+                    'subject_id',
+                    // 'fee',
+                    // 'status',
+                    // 'expiry_date',
                     // 'created_by',
                     // 'updated_by',
                     // 'created_at',
