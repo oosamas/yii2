@@ -211,7 +211,141 @@ $logEntries[] = [
                             'badge' => TimelineEvent::find()->today()->count(),
                             'badgeBgClass' => 'badge-success',
                         ],
-                        
+                        [
+                          'label' => Yii::t('backend', 'Main'),
+                          'options' => ['class' => 'nav-header'],
+                          // 'visible' => Yii::$app->user->can('administrator'),
+                      ],
+                      [
+                          'label' => Yii::t('backend', 'Course Catalogue'),
+                          'url' => ['/content/page/index'],
+                          'icon' => FAS::icon('thumbtack', ['class' => ['nav-icon']]),
+                          'active' => Yii::$app->controller->id === 'page',
+                          // 'visible' => Yii::$app->user->can('administrator'),
+                      ],
+                      [
+                          'label' => Yii::t('backend', 'User Management'),
+                          'url' => '#',
+                          'icon' => FAS::icon('user', ['class' => ['nav-icon']]),
+                          'options' => ['class' => 'nav-item has-treeview'],
+                          'active' => 'content' === Yii::$app->controller->module->id &&
+                              ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                          'items' => [
+                              [
+                                  'label' => Yii::t('backend', 'User List'),
+                                  'url' => ['/user-management/user'],
+                                  'icon' => FAS::icon('user', ['class' => ['nav-icon']]),
+                                  'active' => Yii::$app->controller->id === 'article',
+                              ],
+                              [
+                                  'label' => Yii::t('backend', 'Example'),
+                                  'url' => ['/content/category/index'],
+                                  'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                                  'active' => Yii::$app->controller->id === 'category',
+                              ],
+                          ],
+                          // 'visible' => Yii::$app->user->can('administrator'),
+                      ],
+                      [
+                        'label' => Yii::t('backend', 'Student Management'),
+                        'url' => '#',
+                        'icon' => FAS::icon('graduation-cap', ['class' => ['nav-icon']]),
+                        'options' => ['class' => 'nav-item has-treeview'],
+                        'active' => 'content' === Yii::$app->controller->module->id &&
+                            ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                        'items' => [
+                            [
+                                'label' => Yii::t('backend', 'Student List'),
+                                'url' => ['/student-management/student'],
+                                'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                                'active' => Yii::$app->controller->id === 'article',
+                            ],
+                            [
+                                'label' => Yii::t('backend', 'Ladder Board'),
+                                'url' => ['/content/category/index'],
+                                'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                                'active' => Yii::$app->controller->id === 'category',
+                            ],
+                        ],
+                        // 'visible' => Yii::$app->user->can('administrator'),
+                    ],
+
+                    [
+                      'label' => Yii::t('backend', 'Store Management'),
+                      'url' => '#',
+                      'icon' => FAS::icon('store', ['class' => ['nav-icon']]),
+                      'options' => ['class' => 'nav-item has-treeview'],
+                      'active' => 'content' === Yii::$app->controller->module->id &&
+                          ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                      'items' => [
+                          [
+                              'label' => Yii::t('backend', 'Teacher Portal'),
+                              'url' => ['/content/article/index'],
+                              'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                              'active' => Yii::$app->controller->id === 'article',
+                          ],
+                          [
+                              'label' => Yii::t('backend', 'Ladder Board'),
+                              'url' => ['/content/category/index'],
+                              'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                              'active' => Yii::$app->controller->id === 'category',
+                          ],
+                      ],
+                      // 'visible' => Yii::$app->user->can('administrator'),
+                  ],
+
+                  [
+                    'label' => Yii::t('backend', 'Teacher Portal'),
+                    'url' => '#',
+                    'icon' => FAS::icon('school', ['class' => ['nav-icon']]),
+                    'options' => ['class' => 'nav-item has-treeview'],
+                    'active' => 'content' === Yii::$app->controller->module->id &&
+                        ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                    'items' => [
+                        [
+                            'label' => Yii::t('backend', 'Teacher Portal'),
+                            'url' => ['/content/article/index'],
+                            'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                            'active' => Yii::$app->controller->id === 'article',
+                        ],
+                        [
+                            'label' => Yii::t('backend', 'Ladder Board'),
+                            'url' => ['/content/category/index'],
+                            'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                            'active' => Yii::$app->controller->id === 'category',
+                        ],
+                    ],
+                    // 'visible' => Yii::$app->user->can('administrator'),
+                ],
+
+                [
+                  'label' => Yii::t('backend', 'Admin Settings'),
+                  'url' => '#',
+                  'icon' => FAS::icon('hammer', ['class' => ['nav-icon']]),
+                  'options' => ['class' => 'nav-item has-treeview'],
+                  'active' => 'content' === Yii::$app->controller->module->id &&
+                      ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                  'items' => [
+                      [
+                          'label' => Yii::t('backend', 'Modify Roles'),
+                          'url' => ['/content/article/index'],
+                          'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                          'active' => Yii::$app->controller->id === 'article',
+                      ],
+                      [
+                          'label' => Yii::t('backend', 'Sometrhing else'),
+                          'url' => ['/content/category/index'],
+                          'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                          'active' => Yii::$app->controller->id === 'category',
+                      ],
+                  ],
+                  // 'visible' => Yii::$app->user->can('administrator'),
+              ],
+
+
+
+
+                      //OSB: content below
                         [
                             'label' => Yii::t('backend', 'Content'),
                             'options' => ['class' => 'nav-header'],

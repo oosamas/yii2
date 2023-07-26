@@ -1,6 +1,6 @@
 <?php
 $config = [
-    'name' => 'My Yii Site',
+    'name' => 'A+ Portal',
     'vendorPath' => __DIR__ . '/../../vendor',
     'extensions' => require(__DIR__ . '/../../vendor/yiisoft/extensions.php'),
     'sourceLanguage' => 'en-US',
