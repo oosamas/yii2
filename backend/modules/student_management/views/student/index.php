@@ -38,10 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
 
                     'id',
-                    ['attribute' => 'parent_id', 'label' => 'Parent',
-                     'value' => function($model){
-                      return $model->parent->username;},
-                    ],
+                    'details',
+                    // ['attribute' => 'parent_id', 'label' => 'Parent',
+                    //  'value' => function($model){
+                    //   return $model->parent->username;},
+                    // ],
                     'full_name',
                     ['attribute' => 'grade_id', 'label' => 'Grade', 
                     'value' => function($model){
@@ -50,12 +51,22 @@ $this->params['breadcrumbs'][] = $this->title;
                     'filter' => ArrayHelper::map(Grade::find()->all(), 'id', 'title'),],
 
                 //'points', //OSB: add points to student class
+                [
+                  'attribute' => 'points',
+                  'value' => function ($model) {
+                      // Custom logic to calculate and display points
+                      // Replace this with your own logic
+                      return $model->attribute1 + $model->attribute2;
+                  },
+              ],
                     // 'grade_id',
                     // 'live_support', //OSB: add live support
                     ['attribute' => 'status', 'value' => function($model){return $model->status == 1 ? 'Active' : 'Inactive';}],
                     // 'created_by',
                     // 'updated_by',
                     // 'updated_at',
+                    'live_support',
+                    'gender',
                     'created_at:date',
                     
                     ['class' => \common\widgets\ActionColumn::class],
