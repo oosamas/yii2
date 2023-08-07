@@ -47,25 +47,27 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['attribute' => 'grade_id', 'label' => 'Grade', 
                     'value' => function($model){
                         return $model->grade->description;
-                    },
+                    }, 
                     'filter' => ArrayHelper::map(Grade::find()->all(), 'id', 'title'),],
 
-                //'points', //OSB: add points to student class
+                // 'points', //OSB: add points to student class
                 [
-                  'attribute' => 'points',
+                  'attribute' => 'points', 'label' => 'Points',
                   'value' => function ($model) {
                       // Custom logic to calculate and display points
                       // Replace this with your own logic
-                      return $model->attribute1 + $model->attribute2;
+                      return $model->getStudentPoints(); //OSB: Friday, 4th August, 2023: finish setting it up by pasting points from member_points in A+ DB
                   },
               ],
                     // 'grade_id',
                     // 'live_support', //OSB: add live support
-                    ['attribute' => 'status', 'value' => function($model){return $model->status == 1 ? 'Active' : 'Inactive';}],
+                    ['attribute' => 'status', 'value' => function($model){return $model->status == 1 ? 'Active' : 'Inactive';},
+                    'filter' => [1 => 'Active', 0 => 'Inactive'],],
                     // 'created_by',
                     // 'updated_by',
                     // 'updated_at',
-                    'live_support',
+                    ['attribute' => 'live_support', 'label' => 'Live Support', 'value' => function($model){return $model->live_support == 1 ? 'Active' : 'Not Set';},
+                    'filter' => [1 => 'Active', NULL => 'Not Set'],],
                     'gender',
                     'created_at:date',
                     

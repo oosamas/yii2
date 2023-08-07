@@ -70,3 +70,4 @@ class StudentSearch extends Student
         return $dataProvider;
     }
 }
+
