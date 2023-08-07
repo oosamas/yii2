@@ -116,4 +116,15 @@ class Student extends \yii\db\ActiveRecord
     {
         return $this->hasOne(ParentUser::className(), ['id' => 'parent_id']);
     }
+
+    public function getStudentPoints()
+    {
+        $studentPoints = 0;
+        // foreach ($this->points as $point) {
+        //     $studentPoints+= $point->points;
+        // }
+        return Points::find()->where(['student_id' => $this->id])->sum('points'); 
+        
+    }
+
 }
