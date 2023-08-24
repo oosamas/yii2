@@ -217,10 +217,25 @@ $logEntries[] = [
                           // 'visible' => Yii::$app->user->can('administrator'),
                       ],
                       [
-                          'label' => Yii::t('backend', 'Course Catalogue'),
+                          'label' => Yii::t('backend', 'Content Management'),
                           'url' => ['/content/page/index'],
                           'icon' => FAS::icon('thumbtack', ['class' => ['nav-icon']]),
-                          'active' => Yii::$app->controller->id === 'page',
+                          // 'active' => Yii::$app->controller->id === 'page',
+                          ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                          'items' => [
+                              [
+                                  'label' => Yii::t('backend', 'Mathematics'),
+                                  'url' => ['/user-management/user'],
+                                  'icon' => FAS::icon('user', ['class' => ['nav-icon']]),
+                                  'active' => Yii::$app->controller->id === 'article',
+                              ],
+                              [
+                                  'label' => Yii::t('backend', 'English'),
+                                  'url' => ['/content/category/index'],
+                                  'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                                  'active' => Yii::$app->controller->id === 'category',
+                              ],
+                          ],
                           // 'visible' => Yii::$app->user->can('administrator'),
                       ],
                       [
@@ -238,7 +253,7 @@ $logEntries[] = [
                                   'active' => Yii::$app->controller->id === 'article',
                               ],
                               [
-                                  'label' => Yii::t('backend', 'Example'),
+                                  'label' => Yii::t('backend', 'Subscriptions'),
                                   'url' => ['/content/category/index'],
                                   'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
                                   'active' => Yii::$app->controller->id === 'category',
@@ -261,12 +276,30 @@ $logEntries[] = [
                                 'active' => Yii::$app->controller->id === 'article',
                             ],
                             [
-                                'label' => Yii::t('backend', 'Ladder Board'),
+                                'label' => Yii::t('backend', 'Reports'),
                                 'url' => ['/content/category/index'],
                                 'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
                                 'active' => Yii::$app->controller->id === 'category',
                             ],
-                        ],
+                            [
+                              'label' => Yii::t('backend', 'Student Notes'),
+                              'url' => ['/content/category/index'],
+                              'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                              'active' => Yii::$app->controller->id === 'category',
+                            ],
+                            [
+                            'label' => Yii::t('backend', 'Ladder Board'),
+                            'url' => ['/content/category/index'],
+                            'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                            'active' => Yii::$app->controller->id === 'category',
+                            ],
+                            [
+                              'label' => Yii::t('backend', 'Points'),
+                              'url' => ['/content/category/index'],
+                              'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                              'active' => Yii::$app->controller->id === 'category',
+                          ],
+                              ],
                         // 'visible' => Yii::$app->user->can('administrator'),
                     ],
 
@@ -279,13 +312,13 @@ $logEntries[] = [
                           ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
                       'items' => [
                           [
-                              'label' => Yii::t('backend', 'Teacher Portal'),
+                              'label' => Yii::t('backend', 'Sales Dashboard'),
                               'url' => ['/content/article/index'],
                               'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
                               'active' => Yii::$app->controller->id === 'article',
                           ],
                           [
-                              'label' => Yii::t('backend', 'Ladder Board'),
+                              'label' => Yii::t('backend', 'Modify Products'),
                               'url' => ['/content/category/index'],
                               'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
                               'active' => Yii::$app->controller->id === 'category',
@@ -303,13 +336,25 @@ $logEntries[] = [
                         ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
                     'items' => [
                         [
-                            'label' => Yii::t('backend', 'Teacher Portal'),
+                            'label' => Yii::t('backend', 'Live Support'),
                             'url' => ['/content/article/index'],
                             'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
                             'active' => Yii::$app->controller->id === 'article',
                         ],
                         [
-                            'label' => Yii::t('backend', 'Ladder Board'),
+                            'label' => Yii::t('backend', 'Course Management'),
+                            'url' => ['/content/category/index'],
+                            'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                            'active' => Yii::$app->controller->id === 'category',
+                        ],
+                        [
+                            'label' => Yii::t('backend', 'Payments'),
+                            'url' => ['/content/category/index'],
+                            'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
+                            'active' => Yii::$app->controller->id === 'category',
+                        ],
+                        [
+                            'label' => Yii::t('backend', 'Ratings and Feedback'),
                             'url' => ['/content/category/index'],
                             'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
                             'active' => Yii::$app->controller->id === 'category',
@@ -333,7 +378,7 @@ $logEntries[] = [
                           'active' => Yii::$app->controller->id === 'article',
                       ],
                       [
-                          'label' => Yii::t('backend', 'Sometrhing else'),
+                          'label' => Yii::t('backend', 'Something else'),
                           'url' => ['/content/category/index'],
                           'icon' => FAR::icon('circle', ['class' => ['nav-icon']]),
                           'active' => Yii::$app->controller->id === 'category',
@@ -601,7 +646,7 @@ $logEntries[] = [
 
     <!-- footer -->
     <footer class="main-footer <?php echo $keyStorage->get('adminlte.footer-small-text') ? 'text-sm' : null ?>">
-        <strong>&copy; TechKorner <?php echo date('Y') ?></strong>
+        <strong>&copy; A+ Students, All rights reserved <?php echo date('Y') ?></strong>
         <div class="float-right d-none d-sm-inline-block"><?php echo Yii::powered() ?></div>
     </footer>
     <!-- /footer -->
