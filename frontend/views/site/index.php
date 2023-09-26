@@ -13,7 +13,8 @@ $this->title = Yii::$app->name;
                 'class' => 'slide', // enables slide effect
             ],
         ]) ?>
-<!--
+		
+		<p>This is home page.</p>
         <div class="jumbotron">
             <h1>Congratulations!</h1>
 
@@ -61,6 +62,6 @@ $this->title = Yii::$app->name;
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
             </div>
         </div>
--->
+
     </div>
 </div>
