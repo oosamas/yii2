@@ -6,6 +6,16 @@ $config = [
             'linkAssets' => env('LINK_ASSETS'),
             'appendTimestamp' => YII_ENV_DEV
         ],
+      //   'response' => [
+      //     'class' => 'yii\web\Response',
+      //     'on beforeSend' => function ($event) {
+      //         $response = $event->sender;
+      //         // Set CORS headers
+      //         $response->headers->set('Access-Control-Allow-Origin', '*');
+      //         $response->headers->set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+      //         $response->headers->set('Access-Control-Allow-Headers', 'Authorization');
+      //     },
+      // ],
         'formatter' => [
             'class' => '\common\components\CustomFormatter',
             // other settings for formatter

@@ -1,6 +1,10 @@
 <?php
 
 namespace backend\modules\elearning\models;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\SluggableBehavior;
+use yii\behaviors\TimestampBehavior;
+
 
 use Yii;
 use backend\modules\student_management\models\Grade;
@@ -63,6 +67,21 @@ class Chapter extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
         ];
     }
+
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+            // [
+            //     'class' => SluggableBehavior::class,
+            //     'attribute' => 'title',
+            //     'immutable' => true,
+            // ],
+
+        ];
+    }
+
 
     /**
      * Gets query for [[Grade]].

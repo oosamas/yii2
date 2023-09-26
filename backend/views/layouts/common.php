@@ -220,21 +220,34 @@ $logEntries[] = [
                           'label' => Yii::t('backend', 'Content Management'),
                           'url' => ['/content/page/index'],
                           'icon' => FAS::icon('thumbtack', ['class' => ['nav-icon']]),
-                          // 'active' => Yii::$app->controller->id === 'page',
-                          ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                          'active' => Yii::$app->controller->id === 'subject' ||
+                          'chapter' === Yii::$app->controller->id || 'lesson' === Yii::$app->controller->id ||
+                          'lesson-content' === Yii::$app->controller->id,
                           'items' => [
                               [
-                                  'label' => Yii::t('backend', 'Mathematics'),
-                                  'url' => ['/user-management/user'],
+                                  'label' => Yii::t('backend', 'Subject'),
+                                  'url' => ['/elearning/subject/'],
                                   'icon' => FAS::icon('calculator', ['class' => ['nav-icon']]),
-                                  'active' => Yii::$app->controller->id === 'article',
+                                  'active' => Yii::$app->controller->id === 'subject',
                               ],
                               [
-                                  'label' => Yii::t('backend', 'English'),
-                                  'url' => ['/content/category/index'],
+                                  'label' => Yii::t('backend', 'Chapter'),
+                                  'url' => ['/elearning/chapter'],
                                   'icon' => FAR::icon('book', ['class' => ['nav-icon']]),
-                                  'active' => Yii::$app->controller->id === 'category',
+                                  'active' => Yii::$app->controller->id === 'chapter',
                               ],
+                                [
+                                  'label' => Yii::t('backend', 'Lesson'),
+                                  'url' => ['/elearning/lesson'],
+                                  'icon' => FAR::icon('book', ['class' => ['nav-icon']]),
+                                  'active' => Yii::$app->controller->id === 'lesson',
+                              ],
+                              [
+                                'label' => Yii::t('backend', 'Lesson Content'),
+                                'url' => ['/elearning/lesson-content'],
+                                'icon' => FAR::icon('book', ['class' => ['nav-icon']]),
+                                'active' => Yii::$app->controller->id === 'lesson-content',
+                            ],
                           ],
                           // 'visible' => Yii::$app->user->can('administrator'),
                       ],
@@ -260,7 +273,7 @@ $logEntries[] = [
                               ],
                               [
                                   'label' => Yii::t('backend', 'Subscriptions'),
-                                  'url' => ['/content/category/index'],
+                                  'url' => ['/student-management/subscription/index'],
                                   'icon' => FAR::icon('money-check', ['class' => ['nav-icon']]),
                                   'active' => Yii::$app->controller->id === 'category',
                               ],
@@ -301,9 +314,9 @@ $logEntries[] = [
                             ],
                             [
                               'label' => Yii::t('backend', 'Points'),
-                              'url' => ['/content/category/index'],
+                              'url' => ['/student-management/points'],
                               'icon' => FAR::icon('list-ol', ['class' => ['nav-icon']]),
-                              'active' => Yii::$app->controller->id === 'category',
+                              'active' => Yii::$app->controller->id === 'article',
                           ],
                               ],
                         // 'visible' => Yii::$app->user->can('administrator'),
@@ -361,7 +374,7 @@ $logEntries[] = [
                         ],
                         [
                             'label' => Yii::t('backend', 'Payments'),
-                            'url' => ['/content/category/index'],
+                            'url' => ['/student-management/payment'],
                             'icon' => FAR::icon('wallet', ['class' => ['nav-icon']]),
                             'active' => Yii::$app->controller->id === 'category',
                         ],
