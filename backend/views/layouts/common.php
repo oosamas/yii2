@@ -214,7 +214,7 @@ $logEntries[] = [
                         [
                           'label' => Yii::t('backend', 'Main'),
                           'options' => ['class' => 'nav-header'],
-                          // 'visible' => Yii::$app->user->can('administrator'),
+                          // 'visible' => Yii::$app->user->can('administrator'), 
                       ],
                       [
                           'label' => Yii::t('backend', 'Content Management'),
