@@ -252,6 +252,40 @@ $logEntries[] = [
                           // 'visible' => Yii::$app->user->can('administrator'),
                       ],
                       [
+                        'label' => Yii::t('backend', 'Test Management'),
+                        'url' => ['/elearning/lesson-test/'],
+                        'icon' => FAS::icon('thumbtack', ['class' => ['nav-icon']]),
+                        'active' => Yii::$app->controller->id === 'lesson-test' ||
+                        'lesson-test-question' === Yii::$app->controller->id || 'lesson-test-options' === Yii::$app->controller->id ||
+                        'lesson-test-attempt' === Yii::$app->controller->id,
+                        'items' => [
+                            [
+                                'label' => Yii::t('backend', 'Test Attempt'),
+                                'url' => ['/elearning/lesson-test-attempt/'],
+                                'icon' => FAS::icon('list', ['class' => ['nav-icon']]),
+                                'active' => Yii::$app->controller->id === 'lesson-test-attempt',
+                            ],
+                            [
+                                'label' => Yii::t('backend', 'Test Question Options'),
+                                'url' => ['/elearning/lesson-test-options/'],
+                                'icon' => FAS::icon('check', ['class' => ['nav-icon']]),
+                                'active' => Yii::$app->controller->id === 'lesson-test-options',
+                            ],
+                            [
+                                'label' => Yii::t('backend', 'Test Question'),
+                                'url' => ['/elearning/lesson-test-question/'],
+                                'icon' => FAS::icon('list', ['class' => ['nav-icon']]),
+                                'active' => Yii::$app->controller->id === 'lesson-test-question',
+                            ],
+                            [
+                                'label' => Yii::t('backend', 'Test'),
+                                'url' => ['/elearning/lesson-test/'],
+                                'icon' => FAS::icon('pen', ['class' => ['nav-icon']]),
+                                'active' => Yii::$app->controller->id === 'lesson-test',    
+                            ],
+                        ],
+                      ],      
+                      [
                           'label' => Yii::t('backend', 'User Management'),
                           'url' => '#',
                           'icon' => FAS::icon('user', ['class' => ['nav-icon']]),
