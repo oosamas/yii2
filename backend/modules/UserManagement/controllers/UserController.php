@@ -5,7 +5,7 @@ namespace backend\modules\UserManagement\controllers;
 use webvimark\components\AdminDefaultController;
 use Yii;
 //use webvimark\modules\UserManagement\models\User;
-use backend\modules\UserManagement\models\Saleuser as User;
+use backend\modules\UserManagement\models\Parentuser as User;
 use backend\modules\UserManagement\models\UserProfile ;
 use backend\modules\UserManagement\models\search\UserSearch;
 use yii\web\NotFoundHttpException;
@@ -18,7 +18,7 @@ class UserController extends AdminDefaultController
 	/**
 	 * @var User
 	 */
-	public $modelClass = 'backend\modules\UserManagement\models\Saleuser';
+	public $modelClass = 'backend\modules\UserManagement\models\Parentuser';
 
 	/**
 	 * @var UserSearch
