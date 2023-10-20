@@ -9,7 +9,7 @@ use yii\grid\GridView;
  * @var yii\data\ActiveDataProvider $dataProvider
  */
 
-$this->title = 'Lesson Reads';
+$this->title = 'Lessons Read';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="lesson-read-index">
@@ -35,6 +35,22 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
 
                     'id',
+
+                    ['attribute' => 'lesson_id', 'label' => 'Student', 
+                    'value' => function($model){
+                        return $model->student->full_name;
+                    }, 
+                    // 'filter' => ArrayHelper::map(Subject::find()->all(), 'id', 'title'),
+                  ],
+
+                    ['attribute' => 'lesson_id', 'label' => 'Lesson', 
+                    'value' => function($model){
+                      if ($model->lesson) {
+                        return $model->lesson->title;
+                      }
+                    }, 
+                    // 'filter' => ArrayHelper::map(Subject::find()->all(), 'id', 'title'),
+                  ],
                     'lesson_id',
                     'student_id',
                     'score',

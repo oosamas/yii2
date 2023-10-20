@@ -3,6 +3,7 @@
 namespace backend\modules\student_management\models;
 use webvimark\modules\UserManagement\models\User;
 use backend\modules\UserManagement\models\ParentUser;
+use backend\modules\elearning\models\LessonRead;
 
 use Yii;
 use yii\behaviors\BlameableBehavior;

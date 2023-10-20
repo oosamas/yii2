@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'full_name',
                     ['attribute' => 'grade_id', 'label' => 'Grade', 
                     'value' => function($model){
-                        return $model->grade->description;
+                        return $model->grade->title;
                     }, 
                     'filter' => ArrayHelper::map(Grade::find()->all(), 'id', 'title'),],
 

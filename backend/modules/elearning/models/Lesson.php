@@ -5,19 +5,23 @@ namespace backend\modules\elearning\models;
 use Yii;
 
 /**
- * This is the model class for table "lesson_content".
+ * This is the model class for table "lesson".
  *
  * @property int $id
- * @property int|null $subject_id
- * @property int $lesson_id
+ * @property int $subject_id
  * @property int $chapter_id
+ * @property int|null $grade_id
  * @property string $title
- * @property string $content
+ * @property string|null $content
  * @property int $status
  * @property int|null $created_by
  * @property int|null $updated_by
  * @property int|null $created_at
  * @property int|null $updated_at
+ *
+ * @property Chapter $chapter
+ * @property LessonRead[] $lessonReads
+ * @property LessonTest[] $lessonTests
  */
 class Lesson extends \yii\db\ActiveRecord
 {
@@ -26,7 +30,7 @@ class Lesson extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'lesson_content';
+        return 'lesson';
     }
 
     /**
@@ -35,10 +39,11 @@ class Lesson extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['subject_id', 'lesson_id', 'chapter_id', 'status', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
-            [['lesson_id', 'chapter_id', 'title', 'content', 'status'], 'required'],
+            [['subject_id', 'chapter_id', 'title'], 'required'],
+            [['subject_id', 'chapter_id', 'grade_id', 'status', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
             [['content'], 'string'],
             [['title'], 'string', 'max' => 255],
+            [['chapter_id'], 'exist', 'skipOnError' => true, 'targetClass' => Chapter::className(), 'targetAttribute' => ['chapter_id' => 'id']],
         ];
     }
 
@@ -50,8 +55,8 @@ class Lesson extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'subject_id' => 'Subject ID',
-            'lesson_id' => 'Lesson ID',
             'chapter_id' => 'Chapter ID',
+            'grade_id' => 'Grade ID',
             'title' => 'Title',
             'content' => 'Content',
             'status' => 'Status',
@@ -60,5 +65,35 @@ class Lesson extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    /**
+     * Gets query for [[Chapter]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getChapter()
+    {
+        return $this->hasOne(Chapter::className(), ['id' => 'chapter_id']);
+    }
+
+    /**
+     * Gets query for [[LessonReads]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getLessonReads()
+    {
+        return $this->hasMany(LessonRead::className(), ['lesson_id' => 'id']);
+    }
+
+    /**
+     * Gets query for [[LessonTests]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getLessonTests()
+    {
+        return $this->hasMany(LessonTest::className(), ['lesson_id' => 'id']);
     }
 }
