@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yii\grid\GridView;
+use yii\data\ActiveDataProvider;
 
 /**
  * @var yii\web\View $this
@@ -31,15 +32,24 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attributes' => [
                     'id',
                     ['attribute' => 'parent_id', 'label' => 'Parent Name',
-                     'value' => $model->parent->userProfile->firstname." ".$model->parent->userProfile->lastname
+                    'value' => function($model){
+                      if ($model->parent) {
+                        return $model->parent->userProfile->firstname." ".$model->parent->userProfile->lastname;
+                      }
+                      // else {
+                      //   return $model->parent->username;
+                      // }
+                    }, 
+                    // 'value' => 
+                    //  $model->parent->userProfile->firstname." ".$model->parent->userProfile->lastname
                     
                      //  'value' => $model->parent->username
                   ],
                     'full_name',
                     // 'email:email',
-                    ['attribute' => 'parent_id', 'label' => 'Email',
-                     'value' => $model->parent->email],
-                    'details',
+                    // ['attribute' => 'parent_id', 'label' => 'Email',
+                    //  'value' => $model->parent->email],
+                    // 'details',
                     ['attribute' => 'grade.title', 'label' => 'Grade'],
                     // ['attribute' => 'points', 'label' => 'Points'], //OSB: add points to student class
                     ['attribute' => 'status', 'value' => $model->status == 1 ? 'Active' : 'Inactive'],
@@ -59,6 +69,17 @@ $this->params['breadcrumbs'][] = $this->title;
           <h2>Student Progress Report</h2>
         </div>
         <div class="card-body">
+          <?php
+           $query = \backend\modules\elearning\models\LessonRead::find();
+$query->where(['student_id'=>$model->id]);
+        
+$dataProvider = new ActiveDataProvider([
+    'query' => $query,
+    'pagination' => ['pageSize' => Yii::$app->request->cookies->getValue('_grid_page_size', 20),
+                ],
+    'sort'=>['defaultOrder'=>['id'=>SORT_DESC,]],
+]);
+?>
         <?php echo GridView::widget([
                 'layout' => "{items}\n{pager}",
                 'options' => [
@@ -67,19 +88,19 @@ $this->params['breadcrumbs'][] = $this->title;
                 'tableOptions' => [
                     'class' => ['table', 'text-nowrap', 'table-striped', 'table-bordered', 'mb-0'],
                 ],
-                'dataProvider' => $model->lessonReads,
+                'dataProvider' => $dataProvider,
                 // 'filterModel' => $searchModel,
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
 
-                    'id',
+                    // 'id',
 
-                    ['attribute' => 'lesson_id', 'label' => 'Student', 
-                    'value' => function($model){
-                        return $model->student->full_name;
-                    }, 
-                    // 'filter' => ArrayHelper::map(Subject::find()->all(), 'id', 'title'),
-                  ],
+                  //   ['attribute' => 'lesson_id', 'label' => 'Student', 
+                  //   'value' => function($model){
+                  //       return $model->student->full_name;
+                  //   }, 
+                  //   // 'filter' => ArrayHelper::map(Subject::find()->all(), 'id', 'title'),
+                  // ],
 
                     ['attribute' => 'lesson_id', 'label' => 'Lesson', 
                     'value' => function($model){
@@ -90,15 +111,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     // 'filter' => ArrayHelper::map(Subject::find()->all(), 'id', 'title'),
                   ],
                     'lesson_id',
-                    'student_id',
+                    // 'student_id',
                     'score',
-                    'status',
+                    'date:date',
+                    // 'status',
                     // 'created_by',
                     // 'updated_by',
                     // 'created_at',
                     // 'updated_at',
                     
-                    ['class' => \common\widgets\ActionColumn::class],
+                    // ['class' => \common\widgets\ActionColumn::class],
                 ],
             ]); ?>
     
