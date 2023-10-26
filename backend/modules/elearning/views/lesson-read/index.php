@@ -54,6 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'lesson_id',
                     'student_id',
                     'score',
+                    'date:date',
                     'status',
                     // 'created_by',
                     // 'updated_by',

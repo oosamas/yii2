@@ -20,6 +20,7 @@ class LessonReadSearch extends LessonRead
         return [
             [['id', 'lesson_id', 'student_id', 'status', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
             [['score'], 'number'],
+            [['date'], 'safe'],
         ];
     }
 
@@ -56,6 +57,7 @@ class LessonReadSearch extends LessonRead
             'lesson_id' => $this->lesson_id,
             'student_id' => $this->student_id,
             'score' => $this->score,
+            'date' => $this->date,
             'status' => $this->status,
             'created_by' => $this->created_by,
             'updated_by' => $this->updated_by,
