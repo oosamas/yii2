@@ -75,7 +75,7 @@ $query->where(['student_id'=>$model->id]);
         
 $dataProvider = new ActiveDataProvider([
     'query' => $query,
-    'pagination' => ['pageSize' => Yii::$app->request->cookies->getValue('_grid_page_size', 1000),
+    'pagination' => ['pageSize' => Yii::$app->request->cookies->getValue('_grid_page_size', 20),
                 ],
     'sort'=>['defaultOrder'=>['id'=>SORT_DESC,]],
 ]);
@@ -126,5 +126,10 @@ $dataProvider = new ActiveDataProvider([
     
         </div>
     </div>
+    <div class="card">
+        <div class="card-header">
+          <h2>Student Notes</h2>
+        </div>
+        <div class="card-body">
 
 </div>

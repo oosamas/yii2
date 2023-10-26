@@ -38,7 +38,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
 
                     'id',
-                    'details',
                     // ['attribute' => 'parent_id', 'label' => 'Parent',
                     //  'value' => function($model){
                     //   return $model->parent->username;},
@@ -70,6 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'filter' => [1 => 'Active', NULL => 'Not Set'],],
                     'gender',
                     'created_at:date',
+                    'details',
                     
                     ['class' => \common\widgets\ActionColumn::class],
                 ],

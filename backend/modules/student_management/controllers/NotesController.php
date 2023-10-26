@@ -3,18 +3,16 @@
 namespace backend\modules\student_management\controllers;
 
 use Yii;
-use backend\modules\student_management\models\Grade;
-use common\models\UserProfile;
-use backend\modules\student_management\models\Student;
-use backend\modules\student_management\models\search\StudentSearch;
+use backend\modules\student_management\models\Notes;
+use backend\modules\student_management\models\search\NotesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * StudentController implements the CRUD actions for Student model.
+ * NotesController implements the CRUD actions for Notes model.
  */
-class StudentController extends Controller
+class NotesController extends Controller
 {
 
     /** @inheritdoc */
@@ -31,23 +29,22 @@ class StudentController extends Controller
     }
 
     /**
-     * Lists all Student models.
+     * Lists all Notes models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new StudentSearch();
+        $searchModel = new NotesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
-    
     }
 
     /**
-     * Displays a single Student model.
+     * Displays a single Notes model.
      * @param integer $id
      * @return mixed
      */
@@ -58,33 +55,25 @@ class StudentController extends Controller
         ]);
     }
 
-    // public function actionNotes($id)
-    // {
-    //   return $this->render('view',[
-    //     'model' => $this->findModel($id),
-    //   ]);
-    // }
     /**
-     * Creates a new Student model.
+     * Creates a new Notes model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Student();
+        $model = new Notes();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
         return $this->render('create', [
             'model' => $model,
-            'grades' => Grade::find()->all(),
-            'user_profile' => UserProfile::find()->all(),
         ]);
     }
 
     /**
-     * Updates an existing Student model.
+     * Updates an existing Notes model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -102,7 +91,7 @@ class StudentController extends Controller
     }
 
     /**
-     * Deletes an existing Student model.
+     * Deletes an existing Notes model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -115,19 +104,17 @@ class StudentController extends Controller
     }
 
     /**
-     * Finds the Student model based on its primary key value.
+     * Finds the Notes model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Student the loaded model
+     * @return Notes the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Student::findOne($id)) !== null) {
+        if (($model = Notes::findOne($id)) !== null) {
             return $model;
         }
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-
-    
 }

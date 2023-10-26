@@ -212,6 +212,13 @@ $logEntries[] = [
                             'badgeBgClass' => 'badge-success',
                         ],
                         [
+                          'label' => Yii::t('backend', 'Dashboard'),
+                          'icon' => FAS::icon('stream', ['class' => ['nav-icon']]),
+                          'url' => ['/dashboard'],
+                          // 'badge' => TimelineEvent::find()->today()->count(),
+                          'badgeBgClass' => 'badge-success',
+                        ],
+                        [
                           'label' => Yii::t('backend', 'Main'),
                           'options' => ['class' => 'nav-header'],
                           // 'visible' => Yii::$app->user->can('administrator'), 
@@ -290,14 +297,14 @@ $logEntries[] = [
                           'url' => '#',
                           'icon' => FAS::icon('user', ['class' => ['nav-icon']]),
                           'options' => ['class' => 'nav-item has-treeview'],
-                          'active' => 'content' === Yii::$app->controller->module->id &&
-                              ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                          'active' => Yii::$app->controller->module->id === 'user-management' ||
+                              ('teacher-reports' === Yii::$app->controller->id || 'subscriptions' === Yii::$app->controller->id),
                           'items' => [
                               [
                                   'label' => Yii::t('backend', 'User List'),
                                   'url' => ['/user-management/user'],
                                   'icon' => FAS::icon('user', ['class' => ['nav-icon']]),
-                                  'active' => Yii::$app->controller->id === 'article',
+                                  'active' => Yii::$app->controller->id === 'user',
                               ],
                               [
                                   'label' => Yii::t('backend', 'Teacher Reports'),
@@ -319,14 +326,14 @@ $logEntries[] = [
                         'url' => '#',
                         'icon' => FAS::icon('graduation-cap', ['class' => ['nav-icon']]),
                         'options' => ['class' => 'nav-item has-treeview'],
-                        'active' => 'content' === Yii::$app->controller->module->id &&
+                        'active' => Yii::$app->controller->module->id === 'student-management' ||
                             ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
                         'items' => [
                             [
                                 'label' => Yii::t('backend', 'Student List'),
                                 'url' => ['/student-management/student'],
                                 'icon' => FAR::icon('user', ['class' => ['nav-icon']]),
-                                'active' => Yii::$app->controller->id === 'article',
+                                'active' => Yii::$app->controller->id === 'student',
                             ],
                             [
                                 'label' => Yii::t('backend', 'Reports'),
