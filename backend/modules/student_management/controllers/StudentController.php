@@ -57,6 +57,7 @@ class StudentController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+    
 
     // public function actionNotes($id)
     // {
