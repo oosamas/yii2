@@ -18,7 +18,7 @@ class LessonSearch extends Lesson
     public function rules()
     {
         return [
-            [['id', 'subject_id', 'lesson_id', 'chapter_id', 'status', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
+            [['id', 'subject_id', 'grade_id', 'chapter_id', 'status', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
             [['title', 'content'], 'safe'],
         ];
     }
@@ -54,7 +54,8 @@ class LessonSearch extends Lesson
         $query->andFilterWhere([
             'id' => $this->id,
             'subject_id' => $this->subject_id,
-            'lesson_id' => $this->lesson_id,
+            'grade_id' => $this->grade_id,
+            // 'title' => $this->title,
             'chapter_id' => $this->chapter_id,
             'status' => $this->status,
             'created_by' => $this->created_by,

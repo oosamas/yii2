@@ -74,7 +74,7 @@ class Lesson extends \yii\db\ActiveRecord
      */
     public function getChapter()
     {
-        return $this->hasOne(Chapter::className(), ['id' => 'chapter_id']);
+        return $this->hasMany(Chapter::className(), ['id' => 'chapter_id']);
     }
 
     /**
