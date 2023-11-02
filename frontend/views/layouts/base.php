@@ -20,12 +20,14 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
     <?php echo Nav::widget([
         'options' => ['class' => ['navbar-nav', 'justify-content-end', 'ml-auto']],
         'items' => [
+          // Home is the about us page (add research, awards, testimonials on home page)
+          // about us, research, 10k+ reviews, assessments, social cause, signup, contact us
            ['label' => Yii::t('frontend', 'Home'), 'url' => ['/site/index']],
            ['label' => Yii::t('frontend', 'About'), 'url' => ['/page/view', 'slug'=>'about']],
-           ['label' => Yii::t('frontend', 'Articles'), 'url' => ['/article/index']],
+           ['label' => Yii::t('frontend', 'Research'), 'url' => ['/article/index']],
            ['label' => Yii::t('frontend', 'Contact'), 'url' => ['/site/contact']],
            ['label' => Yii::t('frontend', 'Signup'), 'url' => ['/user/sign-in/signup'], 'visible'=>Yii::$app->user->isGuest],
-            ['label' => Yii::t('frontend', 'Login'), 'url' => ['/user-management/auth/login'],
+            ['label' => Yii::t('frontend', 'Textbooks'), 'url' => ['/user-management/auth/login'],
                 'visible'=>Yii::$app->user->isGuest and Yii::$app->controller->id !="application-detail"],
             [
                 'label' => Yii::$app->user->isGuest ? '' : Yii::$app->user->username , //identity->getPublicIdentity(),
