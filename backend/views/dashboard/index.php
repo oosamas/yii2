@@ -64,7 +64,8 @@ $formatter = Yii::$app->formatter;
               <div class="inner">
                   
                   <h3>£100</h3>
-                <p>New Users</p>
+                  <!-- new users, to record pace of growth -->
+                <p>New Users</p> 
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -78,8 +79,8 @@ $formatter = Yii::$app->formatter;
             <div class="small-box bg-danger">
               <div class="inner">
                   <h3>100</h3>
-
-                <p>Courses</p>
+                <!-- website visitors, track number of visitors to website, and if number is growing -->
+                <p>Website Visitors</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -95,7 +96,7 @@ $formatter = Yii::$app->formatter;
             <div class="small-box bg-gradient-dark">
               <div class="inner">
                   <h3>100</h3>
-
+              <!-- top lessons, this metric shows which lessons are the most popular  -->
                 <p>Top lessons</p>
               </div>
               <div class="icon">
@@ -110,7 +111,7 @@ $formatter = Yii::$app->formatter;
             <div class="small-box bg-olive">
               <div class="inner">
                   <h3>100</h3>
-
+              <!-- Points awarded, the higher this number, the more active our users -->
                   <p>Points Awarded Today</p>
               </div>
               <div class="icon">
@@ -126,9 +127,24 @@ $formatter = Yii::$app->formatter;
             <div class="small-box bg-gradient-navy">
               <div class="inner">
                   
-                  <h5>Sales</h5>
-                  <br />
-                <p>Today: XXX</p>
+                  <h3>100</h3>
+                  <!-- how many users are active -->
+                <p>Total Active Users</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="/studentms/student-attendance" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-orange">
+              <div class="inner">
+                  
+                  <h3>100 </h3>
+                  <!-- how many total users are there -->
+                <p>Total Users</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -144,6 +160,37 @@ $formatter = Yii::$app->formatter;
                   <h3>100</h3>
 
                 <p>Website Signups</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="/assessmentms/assessment" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-purple">
+              <div class="inner">
+                  <h3>100</h3>
+
+                <p>Renewals</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="/assessmentms/assessment" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-blue">
+              <div class="inner">
+                  <h3>100</h3>
+
+                <p>Cancellations</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
