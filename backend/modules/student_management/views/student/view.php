@@ -136,6 +136,9 @@ $dataProvider = new ActiveDataProvider([
 
   <div class="card">
     <div class="card-header">
+    <div class="card-header">
+            <?php echo Html::a('Create Notes', ['create'], ['class' => 'btn btn-success']) ?>
+        </div>
       <h2>Student Notes</h2>
     </div>
     <div class="card-body">
