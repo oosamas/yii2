@@ -307,11 +307,17 @@ $logEntries[] = [
                                   'active' => Yii::$app->controller->id === 'user',
                               ],
                               [
-                                  'label' => Yii::t('backend', 'Teacher Reports'),
+                                  'label' => Yii::t('backend', 'Teachers'),
                                   'url' => ['/content/category/index'],
                                   'icon' => FAR::icon('file', ['class' => ['nav-icon']]),
                                   'active' => Yii::$app->controller->id === 'category',
                               ],
+                              [
+                                'label' => Yii::t('backend', 'Sales People'),
+                                'url' => ['/content/category/index'],
+                                'icon' => FAR::icon('file', ['class' => ['nav-icon']]),
+                                'active' => Yii::$app->controller->id === 'category',
+                            ],
                               [
                                   'label' => Yii::t('backend', 'Subscriptions'),
                                   'url' => ['/student-management/subscription/index'],
