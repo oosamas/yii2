@@ -263,8 +263,9 @@ $logEntries[] = [
                         'url' => ['/elearning/lesson-test/'],
                         'icon' => FAS::icon('thumbtack', ['class' => ['nav-icon']]),
                         'active' => Yii::$app->controller->id === 'lesson-test' ||
-                        'lesson-test-question' === Yii::$app->controller->id || 'lesson-test-options' === Yii::$app->controller->id ||
-                        'lesson-test-attempt' === Yii::$app->controller->id,
+                        'lesson-test-question' === Yii::$app->controller->id 
+                        || 'lesson-test-options' === Yii::$app->controller->id 
+                        || 'lesson-test-attempt' === Yii::$app->controller->id,
                         'items' => [
                             [
                                 'label' => Yii::t('backend', 'Test Attempt'),
@@ -297,8 +298,10 @@ $logEntries[] = [
                           'url' => '#',
                           'icon' => FAS::icon('user', ['class' => ['nav-icon']]),
                           'options' => ['class' => 'nav-item has-treeview'],
-                          'active' => Yii::$app->controller->module->id === 'user-management' ||
-                              ('teacher-reports' === Yii::$app->controller->id || 'subscriptions' === Yii::$app->controller->id),
+                          'active' => Yii::$app->controller->module->id === 'user-management' 
+                              
+                              || ('teacher-reports' === Yii::$app->controller->id 
+                              || 'subscriptions' === Yii::$app->controller->id),
                           'items' => [
                               [
                                   'label' => Yii::t('backend', 'User List'),
@@ -317,12 +320,12 @@ $logEntries[] = [
                                 'url' => ['/content/category/index'],
                                 'icon' => FAR::icon('file', ['class' => ['nav-icon']]),
                                 'active' => Yii::$app->controller->id === 'category',
-                            ],
+                              ],
                               [
-                                  'label' => Yii::t('backend', 'Subscriptions'),
-                                  'url' => ['/student-management/subscription/index'],
-                                  'icon' => FAR::icon('money-check', ['class' => ['nav-icon']]),
-                                  'active' => Yii::$app->controller->id === 'category',
+                                'label' => Yii::t('backend', 'Subscriptions'),
+                                'url' => ['/student-management/subscription/index'],
+                                'icon' => FAR::icon('money-check', ['class' => ['nav-icon']]),
+                                'active' => Yii::$app->controller->id === 'subscription',
                               ],
                           ],
                           // 'visible' => Yii::$app->user->can('administrator'),
@@ -333,13 +336,22 @@ $logEntries[] = [
                         'icon' => FAS::icon('graduation-cap', ['class' => ['nav-icon']]),
                         'options' => ['class' => 'nav-item has-treeview'],
                         'active' => Yii::$app->controller->module->id === 'student-management' ||
-                            ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                            ('notification' === Yii::$app->controller->id
+                            || 'student' === Yii::$app->controller->id 
+                            || 'notes' === Yii::$app->controller->id
+                            || 'points' === Yii::$app->controller->id),
                         'items' => [
                             [
                                 'label' => Yii::t('backend', 'Student List'),
                                 'url' => ['/student-management/student'],
                                 'icon' => FAR::icon('user', ['class' => ['nav-icon']]),
                                 'active' => Yii::$app->controller->id === 'student',
+                            ],
+                            [
+                              'label' => Yii::t('backend', 'Send Notification'),
+                              'url' => ['/student-management/notification'],
+                              'icon' => FAR::icon('envelope', ['class' => ['nav-icon']]),
+                              'active' => Yii::$app->controller->id === 'notification',
                             ],
                             // [
                             //     'label' => Yii::t('backend', 'Reports'),
@@ -350,7 +362,7 @@ $logEntries[] = [
                             [
                               'label' => Yii::t('backend', 'Student Notes'),
                               'url' => ['/student-management/notes'],
-                              'icon' => FAR::icon('note', ['class' => ['nav-icon']]),
+                              'icon' => FAR::icon('comment', ['class' => ['nav-icon']]),
                               'active' => Yii::$app->controller->id === 'notes',
                             ],
                             // [
