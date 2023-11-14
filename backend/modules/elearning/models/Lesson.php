@@ -96,4 +96,9 @@ class Lesson extends \yii\db\ActiveRecord
     {
         return $this->hasMany(LessonTest::className(), ['lesson_id' => 'id']);
     }
+
+    public function getSubject()
+    {
+        return $this->hasOne(Subject::className(), ['id' => 'subject_id']);
+    }
 }

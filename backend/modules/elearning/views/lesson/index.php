@@ -1,7 +1,9 @@
 <?php
 
+use app\models\Subject;
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
 
 /**
  * @var yii\web\View $this
@@ -35,7 +37,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
 
                     'id',
-                    'subject_id',
+                    // 'subject_id',
+                    ['attribute' => 'subject_id', 'label' => 'Subject', 
+                    'value' => function($model){
+                        return $model->subject->title;
+                    },],
                     'lesson_id',
                     'chapter_id',
                     'title',
