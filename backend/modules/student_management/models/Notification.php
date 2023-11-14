@@ -83,4 +83,16 @@ class Notification extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
         ];
     }
+
+// Getter methods getting attributes 
+/**
+     * Gets query for [[student name]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStudent() 
+    {
+      return $this->hasOne(Student::className(), ['id' => 'parent_id']);
+    }
+
 }
