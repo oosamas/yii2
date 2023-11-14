@@ -41,10 +41,14 @@ $this->params['breadcrumbs'][] = $this->title;
                         return $model->student->full_name;
                     }, ],
                     // 'filter' => ArrayHelper::map(Grade::find()->all(), 'id', 'title'),],
-                    'parent_id',
-                    'parent_type',
-                    'type',
-                    'medium',
+                    // 'parent_id',
+                    ['attribute' => 'parent_id', 'label' => 'Parent', 
+                    'value' => function($model){
+                        return $model->parent->firstname.' '.$model->parent->lastname;
+                    }, ],
+                    // 'parent_type',
+                    // 'type',
+                    // 'medium',
                     'to_number',
                     'from_text',
                     ['attribute' => 'title', 'label' => 'Title'], 

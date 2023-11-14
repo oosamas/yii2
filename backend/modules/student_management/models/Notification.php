@@ -2,6 +2,8 @@
 
 namespace backend\modules\student_management\models;
 
+use backend\modules\UserManagement\models\UserProfile;
+use User;
 use Yii;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\SluggableBehavior;
@@ -92,7 +94,12 @@ class Notification extends \yii\db\ActiveRecord
      */
     public function getStudent() 
     {
-      return $this->hasOne(Student::className(), ['id' => 'parent_id']);
+      return $this->hasOne(Student::className(), ['id' => 'client_id']);
+    }
+
+    public function getParent() 
+    {
+      return $this->hasOne(UserProfile::className(), ['user_id' => 'parent_id']);
     }
 
 }

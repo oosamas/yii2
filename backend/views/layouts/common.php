@@ -348,7 +348,7 @@ $logEntries[] = [
                                 'active' => Yii::$app->controller->id === 'student',
                             ],
                             [
-                              'label' => Yii::t('backend', 'Send Notification'),
+                              'label' => Yii::t('backend', 'Notifications'),
                               'url' => ['/student-management/notification'],
                               'icon' => FAR::icon('envelope', ['class' => ['nav-icon']]),
                               'active' => Yii::$app->controller->id === 'notification',
