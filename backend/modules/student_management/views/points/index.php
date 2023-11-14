@@ -34,19 +34,28 @@ $this->params['breadcrumbs'][] = $this->title;
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
 
-                    'id',
+                    // 'id',
                     'points',
-                    'student_id',
+                    // 'student_id',
+                    ['attribute' => 'student_id', 'label' => 'Student', 
+                    'value' => function($model){
+                        return $model->student->full_name;
+                    }, ],
                     'details:ntext',
+                    // ['attribute' => 'details', 'label' => 'Parent', 
+                    // 'value' => function($model){
+                    //     if ($model->parent->lastname != 'NULL') {
+                    //       return $model->parent->lastname;} //.' '.$model->parent->lastname;
+                    // }, ],
                     'is_redempt',
                     // [$form->field($model, 'redemption_date')->textInput()],
                     // 'reason:ntext',
                     // 'redemption_date',
                     // 'status',
                     // 'created_by',
-                    // 'updated_by',
+                    'updated_by:datetime',
                     // 'created_at',
-                    // 'update_at',
+                    'update_at:datetime',
                     
                     ['class' => \common\widgets\ActionColumn::class],
                 ],

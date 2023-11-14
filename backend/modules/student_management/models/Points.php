@@ -1,6 +1,7 @@
 <?php
 
 namespace backend\modules\student_management\models;
+use backend\modules\UserManagement\models\UserProfile;
 
 use Yii;
 use yii\behaviors\BlameableBehavior;
@@ -90,4 +91,8 @@ class Points extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Student::className(), ['id' => 'student_id']);
     }
+    // public function getParent() 
+    // {
+    //   return $this->hasOne(UserProfile::className(), ['user_id' => 'student_id']);
+    // }
 }
