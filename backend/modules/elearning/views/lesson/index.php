@@ -42,8 +42,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     'value' => function($model){
                         return $model->subject->title;
                     },],
-                    'lesson_id',
-                    'chapter_id',
+                    // 'lesson_id',
+                    ['attribute' => 'id', 'label' => 'Lesson ID'], 
+                    // 'chapter_id',
                     'title',
                     // 'content:ntext',
                     // 'status',
