@@ -249,12 +249,13 @@ $logEntries[] = [
                                   'icon' => FAR::icon('book', ['class' => ['nav-icon']]),
                                   'active' => Yii::$app->controller->id === 'lesson',
                               ],
-                              [
-                                'label' => Yii::t('backend', 'Lesson Content'),
-                                'url' => ['/elearning/lesson-content'],
-                                'icon' => FAR::icon('book', ['class' => ['nav-icon']]),
-                                'active' => Yii::$app->controller->id === 'lesson-content',
-                            ],
+                              // no need for lesson content when lesson is the same thing: OSB 11-14-2023
+                            //   [
+                            //     'label' => Yii::t('backend', 'Lesson Content'),
+                            //     'url' => ['/elearning/lesson-content'],
+                            //     'icon' => FAR::icon('book', ['class' => ['nav-icon']]),
+                            //     'active' => Yii::$app->controller->id === 'lesson-content',
+                            // ],
                           ],
                           // 'visible' => Yii::$app->user->can('administrator'),
                       ],
@@ -298,10 +299,10 @@ $logEntries[] = [
                           'url' => '#',
                           'icon' => FAS::icon('user', ['class' => ['nav-icon']]),
                           'options' => ['class' => 'nav-item has-treeview'],
-                          'active' => Yii::$app->controller->module->id === 'user-management' 
-                              
-                              || ('teacher-reports' === Yii::$app->controller->id 
-                              || 'subscriptions' === Yii::$app->controller->id),
+                          'active' => Yii::$app->controller->module->id === 'user-management'
+                          // 'active' => Yii::$app->controller->id === 'user'
+                              || ('teacher-reports' === Yii::$app->controller->id ),
+                              // || 'subscriptions' === Yii::$app->controller->id),
                           'items' => [
                               [
                                   'label' => Yii::t('backend', 'User List'),
@@ -336,6 +337,7 @@ $logEntries[] = [
                         'icon' => FAS::icon('graduation-cap', ['class' => ['nav-icon']]),
                         'options' => ['class' => 'nav-item has-treeview'],
                         'active' => Yii::$app->controller->module->id === 'student-management' ||
+                        // 'active' => Yii::$app->controller->id === 'student' ||
                             ('notification' === Yii::$app->controller->id
                             || 'student' === Yii::$app->controller->id 
                             || 'notes' === Yii::$app->controller->id

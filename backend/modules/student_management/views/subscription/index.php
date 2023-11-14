@@ -34,14 +34,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
 
-                    'id',
+                    // 'id',
                     'title',
                     'fee:decimal',
                     ['attribute' => 'live_support', 'value' => function($model){return $model->status == 1 ? 'Yes' : 'No';}],
                     'fee_type',
-                    // 'duration',
+                    'duration',
                     ['attribute' => 'status', 'value' => function($model){return $model->status == 1 ? 'Active' : 'Inactive';}],
-                    // 'created_by',
+                    'created_by',
                     // 'updated_by',
                     // 'created_at',
                     // 'updated_at',

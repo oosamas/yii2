@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
 
-                    'id',
+                    // 'id',
                     // ['attribute' => 'parent_id', 'label' => 'Parent',
                     //  'value' => function($model){
                     //   return $model->parent->username;},
@@ -65,8 +65,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     // 'created_by',
                     // 'updated_by',
                     // 'updated_at',
-                    ['attribute' => 'live_support', 'label' => 'Live Support', 'value' => function($model){return $model->live_support == 1 ? 'Active' : 'Not Set';},
-                    'filter' => [1 => 'Active', NULL => 'Not Set'],],
+                    // ['attribute' => 'live_support', 'label' => 'Live Support', 'value' => function($model){return $model->live_support == 1 ? 'Active' : 'Not Set';},
+                    // 'filter' => [1 => 'Active', NULL => 'Not Set'],],
                     'gender',
                     'created_at:date',
                     'details',
