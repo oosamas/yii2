@@ -30,7 +30,7 @@ $formatter = Yii::$app->formatter;
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                  <h3>100</h3>
+                  <h3><?php echo $studentReport['studentLive'] ?></h3>
 
                 <p>Live Students</p>
               </div>

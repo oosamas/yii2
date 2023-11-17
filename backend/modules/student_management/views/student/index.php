@@ -37,11 +37,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
 
-                    // 'id',
-                    // ['attribute' => 'parent_id', 'label' => 'Parent',
-                    //  'value' => function($model){
-                    //   return $model->parent->username;},
-                    // ],
+                    'id',
+                    ['attribute' => 'parent_id', 'label' => 'Parent',
+                     'value' => function($model){
+                      if ($model->parent){
+                      return $model->parent->username;}},
+                    ],
                     'full_name',
                     ['attribute' => 'grade_id', 'label' => 'Grade', 
                     'value' => function($model){
