@@ -110,7 +110,7 @@ $formatter = Yii::$app->formatter;
             <!-- small box -->
             <div class="small-box bg-olive">
               <div class="inner">
-                  <h3>100</h3>
+                  <h3><?php echo $studentReport['userPoints']; ?></h3>
               <!-- Points awarded, the higher this number, the more active our users -->
                   <p>Points Awarded Today</p>
               </div>

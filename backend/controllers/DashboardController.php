@@ -3,6 +3,7 @@
 namespace backend\controllers;
 use backend\modules\elearning\models\LessonRead;
 use common\models\User;
+use backend\modules\student_management\models\Points;
 use backend\models\search\TimelineEventSearch;
 use backend\modules\student_management\models\Student;
 use backend\modules\UserManagement\models\UserProfile;
@@ -31,6 +32,7 @@ class DashboardController extends AdminDefaultController
     $studentReport['studentLive']= $this->getLiveStudentReport();
     $studentReport['studentActive'] = $this->getActiveStudent();
     $studentReport['userActive'] = $this->getTotalUsers();
+    $studentReport['userPoints'] = $this->getPointsToday();
     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
     $dataProvider->sort = [
       'defaultOrder' => ['created_at' => SORT_DESC]
@@ -74,5 +76,25 @@ class DashboardController extends AdminDefaultController
     $query->where(['status'=> 1]);
     $count= $query->count('id');
     return $count;
+  }
+  public function getTotalPoints()
+  {
+    return User::find()->where(['status'=> 1])->count('id');
+    // every question is assigned fixed marks
+    // raw score is calculated by multiplying question times mark,
+    // eg., 10 questions times 20 mark = 200 score
+    // to calculate points every test with over 80% success gets 100 points
+    // repteated tests upto 3 times get points
+    // final chapter test recieve 1000 points
+    // final lesson test recieves 500 points
+    // first time correct test gets 100 points
+    // 2nd and third time test gets 10 points
+
+
+  }
+  public function getPointsToday()
+  {
+  return Points::find()-> where(["DATE_FORMAT(FROM_UNIXTIME(`created_at`), '%Y-%m-%d')" => date("Y-m-d")])->sum('points');
+  
   }
 }
