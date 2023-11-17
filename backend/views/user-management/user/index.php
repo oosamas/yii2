@@ -31,11 +31,36 @@ $this->params['breadcrumbs'][] = $this->title;
 			<div class="row">
 				<div class="col-sm-6">
 					<p>
+            <!-- create a new user record  -->
 						<?= GhostHtml::a(
-							'<span class="glyphicon glyphicon-plus-sign"></span> ' . UserManagementModule::t('back', 'Create'),
+							'<span class="glyphicon glyphicon-plus-sign"></span> ' . UserManagementModule::t('back', 'Create User'),
 							['/user-management/user/create'],
 							['class' => 'btn btn-success']
 						) ?>
+            <!-- show teachers  -->
+            <?= GhostHtml::a(
+							'<span class="glyphicon glyphicon-plus-sign"></span> ' . UserManagementModule::t('back', 'Teachers'),
+							['/user-management/user/teacher'],
+							['class' => 'btn btn-success']
+						) ?>
+            <!-- show sales People -->
+            <?= GhostHtml::a(
+							'<span class="glyphicon glyphicon-plus-sign"></span> ' . UserManagementModule::t('back', 'Sales People'),
+							['/user-management/user/salespeople'],
+							['class' => 'btn btn-success']
+						) ?>
+            <!-- send email -->
+            <?= GhostHtml::a(
+							'<span class="glyphicon glyphicon-plus-sign"></span> ' . UserManagementModule::t('back', 'Send Notification'),
+							['/user-management/user/notifications'],
+							['class' => 'btn btn-success']
+						) ?>
+            <!-- send text message  -->
+            <!-- <?//= GhostHtml::a(
+							// '<span class="glyphicon glyphicon-plus-sign"></span> ' . UserManagementModule::t('back', 'Text User'),
+							// ['/user-management/user/create'],
+							// ['class' => 'btn btn-success']
+						//) ?> -->
 					</p>
 				</div>
 
