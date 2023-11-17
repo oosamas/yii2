@@ -127,9 +127,9 @@ $formatter = Yii::$app->formatter;
             <div class="small-box bg-gradient-navy">
               <div class="inner">
                   
-                  <h3>100</h3>
+                  <h3><?php echo $studentReport['studentActive']; ?></h3>
                   <!-- how many users are active -->
-                <p>Total Active Users</p>
+                <p>Total Active Students</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -142,7 +142,7 @@ $formatter = Yii::$app->formatter;
             <div class="small-box bg-gradient-orange">
               <div class="inner">
                   
-                  <h3>100 </h3>
+                  <h3><?php echo $studentReport['userActive']; ?></h3>
                   <!-- how many total users are there -->
                 <p>Total Users</p>
               </div>

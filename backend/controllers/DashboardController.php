@@ -2,7 +2,10 @@
 
 namespace backend\controllers;
 use backend\modules\elearning\models\LessonRead;
+use common\models\User;
 use backend\models\search\TimelineEventSearch;
+use backend\modules\student_management\models\Student;
+use backend\modules\UserManagement\models\UserProfile;
 use webvimark\components\AdminDefaultController;
 use Yii;
 use yii\web\Controller;
@@ -24,9 +27,10 @@ class DashboardController extends AdminDefaultController
   public function actionIndex()
   {
     $studentReport=[];
-    // $studentLive= 
     $searchModel = new TimelineEventSearch();
     $studentReport['studentLive']= $this->getLiveStudentReport();
+    $studentReport['studentActive'] = $this->getActiveStudent();
+    $studentReport['userActive'] = $this->getTotalUsers();
     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
     $dataProvider->sort = [
       'defaultOrder' => ['created_at' => SORT_DESC]
@@ -51,10 +55,24 @@ class DashboardController extends AdminDefaultController
   //  ->bindValue(':date', '2023-10-17')
   //  ->queryScalar();
 
-  $query = LessonRead::find();
-  $query->where(['date' => '2023-10-17']);
-  $count = $query->count('student_id');
-  return $count;
+    $query = LessonRead::find();
+    $query->where(['date' => date("Y-m-d")]); // 2023-10-17
+    $count = $query->count('student_id');
+    return $count;
 
+  }
+  public function getActiveStudent()
+  {
+    $query = Student::find();
+    $query->where(['status'=> 1]);
+    $count= $query->count('id');
+    return $count;
+  }
+  public function getTotalUsers()
+  {
+    $query = User::find();
+    $query->where(['status'=> 1]);
+    $count= $query->count('id');
+    return $count;
   }
 }
