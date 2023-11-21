@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
+use app\models\Subject;
+use backend\modules\student_management\models\Grade;
 
 /**
  * @var yii\web\View $this
@@ -35,7 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
 
                     'id',
-                    'subject_id',
+                    ['attribute' => 'subject_id', 'label' => 'Subject', 
+                    'value' => function($model){
+                        return $model->subject->title;
+                    }, 
+                    'filter' => ArrayHelper::map(Subject::find()->all(), 'id', 'title'),],
                     'chapter_id',
                     'lesson_id',
                     'title',

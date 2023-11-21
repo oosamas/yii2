@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
+use app\models\Subject;
+use backend\modules\student_management\models\Grade;
 
 /**
  * @var yii\web\View $this
