@@ -30,7 +30,9 @@ $config = [
             'dateFormat' => 'dd.MM.yyyy']        
     ],
     'modules' => [
-      
+        'store' => [
+            'class' => 'app\modules\store\Module',
+        ],
         'elearning' => [
             'class' => 'backend\modules\elearning\Module',
         ],
