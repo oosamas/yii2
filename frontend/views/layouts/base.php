@@ -24,9 +24,10 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
           // about us, research, 10k+ reviews, assessments, social cause, signup, contact us
            ['label' => Yii::t('frontend', 'Home'), 'url' => ['/site/index']],
            ['label' => Yii::t('frontend', 'About'), 'url' => ['/page/view', 'slug'=>'about']],
-           ['label' => Yii::t('frontend', 'Research'), 'url' => ['/article/index']],
+           ['label' => Yii::t('frontend', 'Research'), 'url' => ['/page/view', 'slug'=>'research']],
            ['label' => Yii::t('frontend', 'Contact'), 'url' => ['/site/contact']],
-           ['label' => Yii::t('frontend', 'FAQs'), 'url' => ['/site/faqs']],
+           ['label' => Yii::t('frontend', 'FAQs'), 'url' => ['/page/view', 'slug'=>'FAQs']],
+           ['label' => Yii::t('frontend', 'Classes'), 'url' => ['/site/faqs']],
            ['label' => Yii::t('frontend', 'Store'), 'url' => ['/site/faqs']],
            ['label' => Yii::t('frontend', 'Signup'), 'url' => ['/user/sign-in/signup'], 'visible'=>Yii::$app->user->isGuest],
             ['label' => Yii::t('frontend', 'Textbooks'), 'url' => ['/user-management/auth/login'],
