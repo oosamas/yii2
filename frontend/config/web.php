@@ -5,6 +5,9 @@ $config = [
     'defaultRoute' => 'site/index',
     'bootstrap' => ['maintenance'],
     'modules' => [
+        'store' => [
+            'class' => 'app\modules\store\Module',
+        ],
 //        'user' => [
 //            'class' => frontend\modules\user\Module::class,
 //            'shouldBeActivated' => false,

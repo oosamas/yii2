@@ -28,7 +28,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
            ['label' => Yii::t('frontend', 'Contact'), 'url' => ['/site/contact']],
            ['label' => Yii::t('frontend', 'FAQs'), 'url' => ['/page/view', 'slug'=>'FAQs']],
            ['label' => Yii::t('frontend', 'Classes'), 'url' => ['/site/faqs']],
-           ['label' => Yii::t('frontend', 'Store'), 'url' => ['/site/faqs']],
+           ['label' => Yii::t('frontend', 'Store'), 'url' => ['/store/product']],
            ['label' => Yii::t('frontend', 'Signup'), 'url' => ['/user/sign-in/signup'], 'visible'=>Yii::$app->user->isGuest],
             ['label' => Yii::t('frontend', 'Textbooks'), 'url' => ['/user-management/auth/login'],
                 'visible'=>Yii::$app->user->isGuest and Yii::$app->controller->id !="application-detail"],

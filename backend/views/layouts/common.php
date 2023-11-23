@@ -388,20 +388,20 @@ $logEntries[] = [
                       'url' => '#',
                       'icon' => FAS::icon('store', ['class' => ['nav-icon']]),
                       'options' => ['class' => 'nav-item has-treeview'],
-                      'active' => 'content' === Yii::$app->controller->module->id &&
-                          ('article' === Yii::$app->controller->id || 'category' === Yii::$app->controller->id),
+                      'active' => 'store' === Yii::$app->controller->module->id &&
+                          ('product' === Yii::$app->controller->id || 'order-log' === Yii::$app->controller->id),
                       'items' => [
                           [
-                              'label' => Yii::t('backend', 'Sales Dashboard'),
-                              'url' => ['/content/article/index'],
-                              'icon' => FAR::icon('universal-access', ['class' => ['nav-icon']]),
-                              'active' => Yii::$app->controller->id === 'article',
+                              'label' => Yii::t('backend', 'Products'),
+                              'url' => ['/store/product/index'],
+                              'icon' => FAR::icon('cart', ['class' => ['nav-icon']]),
+                              'active' => Yii::$app->controller->id === 'product',
                           ],
                           [
-                              'label' => Yii::t('backend', 'Modify Products'),
-                              'url' => ['/content/category/index'],
-                              'icon' => FAR::icon('robot', ['class' => ['nav-icon']]),
-                              'active' => Yii::$app->controller->id === 'category',
+                              'label' => Yii::t('backend', 'Orders Log'),
+                              'url' => ['/store/order-log/index'],
+                              'icon' => FAR::icon('list', ['class' => ['nav-icon']]),
+                              'active' => Yii::$app->controller->id === 'orderLog',
                           ],
                       ],
                       // 'visible' => Yii::$app->user->can('administrator'),
