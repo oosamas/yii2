@@ -268,30 +268,30 @@ $logEntries[] = [
                         || 'lesson-test-options' === Yii::$app->controller->id 
                         || 'lesson-test-attempt' === Yii::$app->controller->id,
                         'items' => [
-                            [
-                                'label' => Yii::t('backend', 'Test Attempt'),
-                                'url' => ['/elearning/lesson-test-attempt/'],
-                                'icon' => FAS::icon('list', ['class' => ['nav-icon']]),
-                                'active' => Yii::$app->controller->id === 'lesson-test-attempt',
-                            ],
+                            // [
+                            //     'label' => Yii::t('backend', 'Test Attempt'),
+                            //     'url' => ['/elearning/lesson-test-attempt/'],
+                            //     'icon' => FAS::icon('list', ['class' => ['nav-icon']]),
+                            //     'active' => Yii::$app->controller->id === 'lesson-test-attempt',
+                            // ],
                             [
                                 'label' => Yii::t('backend', 'Test Question Options'),
                                 'url' => ['/elearning/lesson-test-options/'],
-                                'icon' => FAS::icon('check', ['class' => ['nav-icon']]),
+                                'icon' => FAS::icon('list', ['class' => ['nav-icon']]),
                                 'active' => Yii::$app->controller->id === 'lesson-test-options',
                             ],
                             [
-                                'label' => Yii::t('backend', 'Test Question'),
+                                'label' => Yii::t('backend', 'Test Questions'),
                                 'url' => ['/elearning/lesson-test-question/'],
-                                'icon' => FAS::icon('list', ['class' => ['nav-icon']]),
+                                'icon' => FAS::icon('highlighter', ['class' => ['nav-icon']]),
                                 'active' => Yii::$app->controller->id === 'lesson-test-question',
                             ],
-                            [
-                                'label' => Yii::t('backend', 'Test'),
-                                'url' => ['/elearning/lesson-test/'],
-                                'icon' => FAS::icon('pen', ['class' => ['nav-icon']]),
-                                'active' => Yii::$app->controller->id === 'lesson-test',    
-                            ],
+                            // [
+                            //     'label' => Yii::t('backend', 'Test'),
+                            //     'url' => ['/elearning/lesson-test/'],
+                            //     'icon' => FAS::icon('pen', ['class' => ['nav-icon']]),
+                            //     'active' => Yii::$app->controller->id === 'lesson-test',    
+                            // ],
                         ],
                       ],      
                       [
@@ -394,15 +394,21 @@ $logEntries[] = [
                           [
                               'label' => Yii::t('backend', 'Products'),
                               'url' => ['/store/product/index'],
-                              'icon' => FAR::icon('cart', ['class' => ['nav-icon']]),
+                              'icon' => FAR::icon('tag', ['class' => ['nav-icon']]),
                               'active' => Yii::$app->controller->id === 'product',
                           ],
                           [
-                              'label' => Yii::t('backend', 'Orders Log'),
+                              'label' => Yii::t('backend', 'Orders Recieved'),
                               'url' => ['/store/order-log/index'],
                               'icon' => FAR::icon('list', ['class' => ['nav-icon']]),
                               'active' => Yii::$app->controller->id === 'orderLog',
                           ],
+                          [
+                            'label' => Yii::t('backend', 'Orders Fulfilled'),
+                            'url' => ['/store/order-log/index'],
+                            'icon' => FAR::icon('check', ['class' => ['nav-icon']]),
+                            'active' => Yii::$app->controller->id === 'orderLog',
+                        ],
                       ],
                       // 'visible' => Yii::$app->user->can('administrator'),
                   ],
