@@ -35,7 +35,7 @@ $this->title = Yii::$app->name;
             <div class="col-lg-4">
                 <h2>Heading</h2>
 
-                <p>WTF is working</p>
+                <!-- <p>WTF is working</p> -->
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
             </div>

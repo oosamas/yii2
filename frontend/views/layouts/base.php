@@ -78,7 +78,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
 <footer class="footer mt-auto py-3">
     <div class="container">
         <div class="d-flex flex-row justify-content-between">
-            <div>&copy; Yii Site <?php echo date('Y') ?></div>
+            <div>&copy; A+ Site <?php echo date('Y') ?></div>
             <div><?php echo Yii::powered() ?></div>
         </div>
     </div>

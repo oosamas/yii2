@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
 
-                    // 'id',
+                    // 'id',w
                     'title',
                     'fee:decimal',
                     ['attribute' => 'live_support', 'value' => function($model){return $model->status == 1 ? 'Yes' : 'No';}],
