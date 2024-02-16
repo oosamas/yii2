@@ -102,7 +102,7 @@ class UserConfig extends User
         
         public function getStudent() {
         return
-        \backend\modules\studentms\models\Student::findOne(['user_id' => Yii::$app->user->id]);
+        \backend\modules\student_management\models\Student::findOne(['user_id' => Yii::$app->user->id]);
         }
 
 }

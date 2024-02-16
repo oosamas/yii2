@@ -6,10 +6,17 @@
 
 use yii\helpers\ArrayHelper;
 use yii\bootstrap4\Breadcrumbs;
+use yii\helpers\Url;
+ 
+$cssFile = Url::to('@web/css/style.css');
+$this->registerCssFile($cssFile, ['depends' => [\yii\bootstrap4\BootstrapAsset::class]]);
 
 $this->beginContent('@frontend/views/layouts/base.php')
+
 ?>
-<div class="container">
+
+
+<!-- <div class="container"> -->
 
     <?php echo Breadcrumbs::widget([
         'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -28,6 +35,6 @@ $this->beginContent('@frontend/views/layouts/base.php')
     ]) ?>
 
     <?php echo $content ?>
-</div>
+<!-- </div> -->
 
 <?php $this->endContent() ?>

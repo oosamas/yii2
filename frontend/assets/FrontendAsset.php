@@ -27,7 +27,9 @@ class FrontendAsset extends AssetBundle
      * @var array
      */
     public $css = [
-        '/css/custom.css',
+        'yii2/frontend/web/css/custom.css',
+
+        
     ];
 
     /**

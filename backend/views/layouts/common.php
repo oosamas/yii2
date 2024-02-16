@@ -4,6 +4,7 @@
  * @author Victor Gonzalez <victor@vgr.cl>
  * @var yii\web\View $this
  * @var string $content
+ * checking to see if we have a layout file
  */
 
 use backend\assets\BackendAsset;
