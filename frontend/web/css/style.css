@@ -37,7 +37,6 @@ a{
     line-height: 1.4;
 
 }
-
 .header_top{
     background-color: red;
     background: transparent !important;
@@ -114,6 +113,7 @@ a{
     z-index: 3;
     padding: 0;
 }
+
 .header .my_nav{
     background: rgba(255, 255, 255, 0.1);
     padding: 25px 25px;
@@ -130,6 +130,22 @@ a{
 }
 .header .my_nav li a{font-size: 15px;text-decoration: none;color: #fff;font-weight: 500;padding: 0;}
 
+.header .dropdown-menu{
+    background-color: rgb(30, 178, 166);
+    padding: 12px 10px;
+    border-radius: 0px;
+    border: unset;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+.header .dropdown-menu .dropdown-item{
+    margin-bottom: 5px;
+}
+.header .dropdown-menu .dropdown-item:hover {
+    background-color: #ff000000;
+}
+
+
 .header .my_nav .cert_btn:before{
       position: absolute;
       top: -1px;
@@ -139,7 +155,7 @@ a{
       background: #1eb2a6;
       -webkit-transform: skewX(-20deg);
       -ms-transform: skewX(-20deg);
-      /* transform: skewX(-20deg); */);
+       
       z-index: -1;
       content: '';
 }
@@ -161,6 +177,32 @@ a{
     letter-spacing: 2px;
     text-decoration: none;
     top: 0px;
+}
+.inner_banner{
+    background-image: url(../images/inner_banner.webp);
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    height: unset;
+    padding-top: 350px;
+    padding-bottom: 160px;
+    text-align: center;
+}
+.inner_banner h4{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.inner_banner h1{
+    font-size: 70px;
+    color: #fff;
+    font-weight: 400;
+    padding-top: 10px;
+
 }
 
 /*banner*/
@@ -921,9 +963,197 @@ footer .cont_fields a{
 .copyright_sec p{
   margin:0;
 }
+.about_page{
+    padding: 80px 0px;
+}
+.about_page .content_parent{
+    display: flex;
+    align-items: center;
+}
+.about_page .content{
+    padding-right: 10%;
+}
+.about_page h2{
+    text-transform: capitalize;
+    font-size: 40px;
+}
+.about_page p{}
+.about_page .image{}
+.about_page .image img{
+    width: 100%;
+}
+
+/* faqs page */
+.faqs_sec{
+    padding: 80px 0px;
+}
+.faqs_sec h2{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.faqs_sec .accordion{
+    margin-bottom: 40px;
+}
+.faqs_sec .accordion-item{
+    /* border-width: 1px;
+    border-color: #0000003d;
+    border: 1px solid; */
+    padding: 8px 10px;
+}
+.faqs_sec .accordion-item h4{
+}
+.faqs_sec .accordion-item button{
+    font-weight: 500;
+    font-size: 18px;
+
+}
+.faqs_sec .accordion-button:not(.collapsed){
+    background-color: var(--green);
+    color: #fff;
+}
+.faqs_sec .accordion-button:focus {
+    z-index: 3;
+    /* border-color: #86b7fe; */
+    border: unset;
+    outline: 0;
+    box-shadow: unset;
+}
+.faqs_sec .accordion-collapse{}
+.faqs_sec .accordion-collapse p{}
+.faqs_sec .bottom_content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 20px;
+}
+.faqs_sec .bottom_content h4{
+}
+.faqs_sec .bottom_content a{
+    background-color: var(--green);
+    color: #fff;
+    padding: 18px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: block;
+    margin-top: 13px;
+}
+
+ 
+.faqs_contact{
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+.faqs_contact .content_parent{
+    display: flex;
+    align-items: center;
+}
+.faqs_contact .content{
+    padding-left: 20px;
+}
+.faqs_contact h3{
+    font-size: 36px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+} 
+
+.faqs_contact p{
+    font-size: 18px;
+}
+.faqs_contact p a{
+    color: #000;
+    text-decoration: underline;
+}
+.faqs_contact .box {
+    background-color: #1eb2a6;
+    border-radius: 5px;
+     
+    padding: 40px;
+}
+
+.faqs_contact .cont_box{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+     position: relative;
+     
+  }
+  .faqs_contact .cont_box a{
+    background-color: #ff000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    font-size: 0;
+  }
+  
+  .faqs_contact .cont_box .icon {}
+  .faqs_contact .cont_box .text {}
+  
+  .faqs_contact .cont_box .icon img{
+      width: 42px;
+  }
+  .faqs_contact .cont_box .text span{
+    display: block;
+    color: #fff;
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 3px solid #00000052;
+  }
+  .faqs_contact .cont_box .text strong{
+    color: #fff;
+  }
+  .faqs_contact .social_icons{
+      display: flex;
+      margin-top: 30px;
+  }
+  .faqs_contact .social_icons a{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 4px;
+      background: rgb(0 0 0);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      color: #ffffff;
+      text-decoration: none;
+  }
+  .faqs_contact .social_icons a:hover{
+    background-color: var(--green);
+    color: #fff;
+  }
+
+
+
+
 
 
 @media (max-width:767px){
+ 
+.inner_banner {
+    background-size: contain;
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+.inner_banner h4 {
+    font-size: 14px;
+ 
+}
+.inner_banner h1{
+    font-size: 36px;
+    padding-top: 0;
+}
     .banner {
         height: 88vh;
     }

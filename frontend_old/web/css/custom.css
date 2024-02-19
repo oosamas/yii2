@@ -1,0 +1,84 @@
+.custom-wrapper {
+
+}
+    .custom-wrapper .navbar-nav .user-header {
+         background-color: #012148 !important;
+    }
+    .custom-wrapper .navbar-dark {
+        background-color: #012148 ;
+    }
+     .navbar-dark {
+        background-color: #012148 !important;
+    }
+    .custom-wrapper .brand-link {
+        background-color: #052a56;
+    }
+            .custom-wrapper .brand-link span {
+                color: #fff;
+            }
+    .custom-wrapper .sidebar, .sidebar-dark-primary{
+        
+
+            background-color: #002d61;
+            padding-left: 0px;
+            padding-right: 0px;
+    }
+    
+    .custom-wrapper .sidebar .nav-sidebar .nav-link.active {
+        border-radius: 0px;
+        border-left: 2px solid;
+    }
+.login-page {
+    background-color: #e9e9e9;
+}
+.login-page .card-body.login-card-body {
+    background-color: #dadada;
+}
+.login-page .input-group-append {
+    display: none;
+}
+.login-page .btn-block {
+    background-color: #3f7ec5;
+    border-color: #3f7ec5;
+    border-radius: 0px;
+}
+.login-box .input-group input {
+    background-color: #e9e9e9;
+    border-radius: 0px;
+    border: 1px solid #cdcdcd;
+}
+.login-box .form-group label {
+    font-weight: normal;
+}
+.login-box .card {
+    background-clip: unset !important;
+    border-radius: unset !important;
+    box-shadow: none;
+}
+.login-box .text {
+    background-color: #00214a;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0px;
+}
+
+.login-box .text p {
+    margin: 0px;
+    font-weight: 600;
+}
+
+.login-logo {
+    padding: 5px 0px;
+}
+
+.bg-mihe {background-color: #002147; }
+.bg-ct-1 {background-color: #a94442; }
+.bg-ct-2 {background-color: lightblue; }
+.bg-ct-3 {background-color: #0077FF; }
+.bg-ct-4 {background-color: #17a2b8; }
+.bg-ct-5 {background-color: #6c757d; }
+.bg-ct-6 {background-color: #a94442; }
+
+.bg-ct-selected{ border: 5px dotted white;}
+.ct-selected{}
+.ct:hover, .course-box:hover{cursor: pointer; color:white; }

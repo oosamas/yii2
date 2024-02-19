@@ -32,7 +32,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                <div class="col-md dnone_mob">
                   <div class="cont_box">
                      <div class="icon">
-                        <img src="images/clock.png">
+                        <img src="/frontend/web/images/clock.png">
                      </div>
                      <div class="text">
                         <span>Monday - Friday</span>
@@ -43,7 +43,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                <div class="col-md dnone_mob">
                   <div class="cont_box ">
                      <div class="icon">
-                        <img src="images/telephone.png">
+                        <img src="/frontend/web/images/telephone.png">
                      </div>
                      <div class="text">
                         <span>Call Us</span>
@@ -109,7 +109,19 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
           // Home is the about us page (add research, awards, testimonials on home page)
           // about us, research, 10k+ reviews, assessments, social cause, signup, contact us
            ['label' => Yii::t('frontend', 'Home'), 'url' => ['/site/index']],
-           ['label' => Yii::t('frontend', 'About'), 'url' => ['/page/view', 'slug'=>'about']],
+           ['label' => Yii::t('frontend', 'About'), 'url' => ['/site/about' ]],
+           
+             [
+               'label' => Yii::t('frontend', 'Classes'),
+               'url' => '#',
+               'options' => ['class' => 'dropdown'], // Add a class to the dropdown menu item
+               'items' => [
+                  ['label' => 'Clasess', 'url' => 'https://www.aplusclasses.ca/', 'linkOptions' => ['target' => '_blank']],
+                  ['label' => 'Aplus Youtube', 'url' => 'https://www.youtube.com/channel/UCi_BNskNcmwdwX4abUBAu1g', 'linkOptions' => ['target' => '_blank']],
+                   // Add more dropdown items as needed
+               ],
+           ],
+
            ['label' => Yii::t('frontend', 'Research'), 'url' => ['/page/view', 'slug'=>'research']],
            ['label' => Yii::t('frontend', 'Contact'), 'url' => ['/site/contact']],
            ['label' => Yii::t('frontend', 'FAQs'), 'url' => ['/page/view', 'slug'=>'FAQs']],
@@ -154,7 +166,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
 //            ]
         ]
     ]); ?>
-    <a href="#" class="cert_btn">Get Certificate</a>
+    <a href="#" class="cert_btn">Get Assessment</a>
     <?php NavBar::end(); ?>
 
 
@@ -247,7 +259,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                  <h4>Recent Posts</h4>
                <div class="little_post">
                   <div class="pic">
-                     <img src="images/blog3.webp">
+                     <img src="/frontend/web/images/blog3.webp">
                   </div>
                   <div class="content">
                      <div class="tags">
@@ -259,7 +271,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                </div>
                 <div class="little_post">
                   <div class="pic">
-                     <img src="images/blog3.webp">
+                     <img src="/frontend/web/images/blog3.webp">
                   </div>
                   <div class="content">
                      <div class="tags">
@@ -271,7 +283,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                </div>
                 <div class="little_post">
                   <div class="pic">
-                     <img src="images/blog3.webp">
+                     <img src="/frontend/web/images/blog3.webp">
                   </div>
                   <div class="content">
                      <div class="tags">
