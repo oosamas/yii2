@@ -110,8 +110,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
           // about us, research, 10k+ reviews, assessments, social cause, signup, contact us
            ['label' => Yii::t('frontend', 'Home'), 'url' => ['/site/index']],
            ['label' => Yii::t('frontend', 'About'), 'url' => ['/site/about' ]],
-           
-             [
+           [
                'label' => Yii::t('frontend', 'Classes'),
                'url' => '#',
                'options' => ['class' => 'dropdown'], // Add a class to the dropdown menu item
@@ -122,38 +121,42 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                ],
            ],
 
-           ['label' => Yii::t('frontend', 'Research'), 'url' => ['/page/view', 'slug'=>'research']],
-           ['label' => Yii::t('frontend', 'Contact'), 'url' => ['/site/contact']],
-           ['label' => Yii::t('frontend', 'FAQs'), 'url' => ['/page/view', 'slug'=>'FAQs']],
-           ['label' => Yii::t('frontend', 'Classes'), 'url' => ['/site/faqs']],
-           ['label' => Yii::t('frontend', 'Store'), 'url' => ['/store/product']],
+           
+           ['label' => Yii::t('frontend', 'Textbook'), 'url' => ['/site/textbook']],
            ['label' => Yii::t('frontend', 'Signup'), 'url' => ['/user/sign-in/signup'], 'visible'=>Yii::$app->user->isGuest],
-            ['label' => Yii::t('frontend', 'Textbooks'), 'url' => ['/user-management/auth/login'],
-                'visible'=>Yii::$app->user->isGuest and Yii::$app->controller->id !="application-detail"],
-            [
-                'label' => Yii::$app->user->isGuest ? '' : Yii::$app->user->username , //identity->getPublicIdentity(),
-                'visible'=>!Yii::$app->user->isGuest,
-                'items'=>[
-                    [
-                        'label' => Yii::t('frontend', 'Profile'),
-                        'url' => ['/studentms/student/view']
-                    ],
-                   [
-                       'label' => Yii::t('frontend', 'Settings'),
-                       'url' => ['/user/default/index']
-                   ],
-                    [
-                        'label' => Yii::t('frontend', 'Backend'),
-                        'url' => Yii::getAlias('@backendUrl'),
-                        'visible'=>Yii::$app->user->can('manager')
-                    ],
-                    [
-                        'label' => Yii::t('frontend', 'Logout'),
-                        'url' => ['/user-management/auth/logout'],
-                        'linkOptions' => ['data-method' => 'post']
-                    ]
-                ]
-            ],
+           ['label' => Yii::t('frontend', 'Research'), 'url' => ['/site/research']],
+           ['label' => Yii::t('frontend', 'Store'), 'url' => ['/site/store']],
+         
+           ['label' => Yii::t('frontend', 'FAQs'), 'url' => ['/site/faqs']],
+           ['label' => Yii::t('frontend', 'Contact'), 'url' => ['/site/contact']],
+         //   ['label' => Yii::t('frontend', 'Store'), 'url' => ['/store/product']],
+           
+            // ['label' => Yii::t('frontend', 'Textbooks'), 'url' => ['/user-management/auth/login'],
+            //     'visible'=>Yii::$app->user->isGuest and Yii::$app->controller->id !="application-detail"],
+            // [
+            //     'label' => Yii::$app->user->isGuest ? '' : Yii::$app->user->username , //identity->getPublicIdentity(),
+            //     'visible'=>!Yii::$app->user->isGuest,
+            //     'items'=>[
+            //         [
+            //             'label' => Yii::t('frontend', 'Profile'),
+            //             'url' => ['/studentms/student/view']
+            //         ],
+            //        [
+            //            'label' => Yii::t('frontend', 'Settings'),
+            //            'url' => ['/user/default/index']
+            //        ],
+            //         [
+            //             'label' => Yii::t('frontend', 'Backend'),
+            //             'url' => Yii::getAlias('@backendUrl'),
+            //             'visible'=>Yii::$app->user->can('manager')
+            //         ],
+            //         [
+            //             'label' => Yii::t('frontend', 'Logout'),
+            //             'url' => ['/user-management/auth/logout'],
+            //             'linkOptions' => ['data-method' => 'post']
+            //         ]
+            //     ]
+            // ],
 //            [
 //                'label'=>Yii::t('frontend', 'Language'),
 //                'items'=>array_map(function ($code) {
