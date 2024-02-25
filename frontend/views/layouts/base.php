@@ -22,43 +22,44 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
     <!-- header top -->
     <div class="header_top">
          <div class="container">
-            <div class="row">
-               <div class="col-md-5">
-                  <a class="logo" href="<?php Yii::$app->homeUrl ?>">
-                  Academia
-                  <span>Online Education &amp; Learning</span>
-                  </a>
-               </div>
-               <div class="col-md dnone_mob">
-                  <div class="cont_box">
-                     <div class="icon">
-                        <img src="/frontend/web/images/clock.png">
-                     </div>
-                     <div class="text">
-                        <span>Monday - Friday</span>
-                        <strong>8:00AM-8:00PM</strong>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md dnone_mob">
+            <div class="row align-items-center">
+               
+                <div class="col-md-4">
+                     <ul class="info">
+                           <li class="item">
+                              <a href="mailto:admin@aplustudents.com"> <i class="fa fa-envelope"></i> admin@aplustudents.com </a>
+                           </li>
+                           <li class="item">
+                              <a href="905-460-4834"> <i class="fa fa-phone"></i> 905-460-4834 </a>
+                           </li>
+                     </ul>
+                </div>
+                <div class="col-md-4"></div>
+
+               <!-- <div class="col-md dnone_mob">
                   <div class="cont_box ">
                      <div class="icon">
                         <img src="/frontend/web/images/telephone.png">
                      </div>
                      <div class="text">
                         <span>Call Us</span>
-                        <strong>+2 392 3929 210</strong>
+                        <strong>905-460-4834</strong>
+                        <a href="tel:9054604834">test</a>
                      </div>
                   </div>
-               </div>
+               </div> -->
+
                <div class="col-md d-flex justify-content-end align-items-center dnone_mob">
-                  <div class="social_icons">
-                     <!-- <a href="#"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a> -->
-                     <a href="#"><i class="fa fa-facebook"></i> </a>
-                     <a href="#"><i class="fa fa-twitter"></i> </a>
-                     <a href="#"><i class="fa fa-instagram"></i> </a>
-                     <a href="#"><i class="fa fa-dribbble"></i> </a>
-                  </div>
+                     <div class="social_icons">
+                                 <!-- <a href="#"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a> -->
+                                 <a href="https://www.facebook.com/aplustudents"><i class="fa fa-facebook"></i> </a>
+                                 <!-- <a href="#"><i class="fa fa fa-youtube"></i></a> -->
+                                 <a href="https://www.linkedin.com/in/Aplus-students"><i class="fa fa-linkedin"></i></a>
+                                 <a href="https://twitter.com/aplus_students"><i class="fa fa-twitter"></i></a>
+                                 <a href="https://www.instagram.com/studentsaplus/"><i class="fa fa-instagram"></i> </a>
+                                 <a href=" https://plus.google.com/100139132828254137034"><i class="fa fa-google-plus-g"></i> </a>
+                     </div>
+                  
                </div>
 
                <!-- <nav role="navigation" class="navbar-default navbar-fixed-top navbar navbar-expand-lg navbar-light bg-light">
@@ -89,10 +90,20 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
       </div>
       <!-- header top -->
       <!-- header section -->
-      <div class="header dnone_mob">
+      <div class="header dnone_mob ">
          <div class="container">
-            <div class="row">
-               <div class="col-md-12">
+            <div class="row align-items-center">
+           
+                  <div class="col-md-2">
+                     <!-- <a class="logo" href="<?php //Yii::$app->homeUrl ?>">
+                           <img src="/frontend/web/images/logo-white.webp" alt="">
+                     </a> -->
+                     <a class="logo" href="/frontend/web/site/index">
+                           <img src="/frontend/web/images/logo-white.webp" alt="">
+                     </a>
+                     
+                  </div>      
+               <div class="col-md-10">
                   
 
 
@@ -122,7 +133,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
            ],
 
            
-           ['label' => Yii::t('frontend', 'Textbook'), 'url' => ['/site/textbook']],
+           ['label' => Yii::t('frontend', 'Textbook'), 'url' => "https://www.educationone.org/", 'linkOptions' => ['target' => '_blank']],
            ['label' => Yii::t('frontend', 'Signup'), 'url' => ['/user/sign-in/signup'], 'visible'=>Yii::$app->user->isGuest],
            ['label' => Yii::t('frontend', 'Research'), 'url' => ['/site/research']],
            ['label' => Yii::t('frontend', 'Store'), 'url' => ['/site/store']],
@@ -169,7 +180,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
 //            ]
         ]
     ]); ?>
-    <a href="#" class="cert_btn">Get Assessment</a>
+    <!-- <a href="#" class="cert_btn">Get Assessment</a> -->
     <?php NavBar::end(); ?>
 
 
@@ -214,16 +225,23 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
        <div class="parent">
             <div class="col">
                   <a class="logo" href="home.html">
-                     Academia
-                     <span>Online Education &amp; Learning</span>
+                     <!-- Academia
+                     <span>Online Education &amp; Learning</span> -->
+                     <img src="/frontend/web/images/logo-black.png" alt="">
+                     
                   </a>
-                  <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                  <p> With over 15 years and 10 thousand students, we have perfected the concept of online learning.  </p>
 
+                  
                   <div class="social_icons">
-                      <a href="#"><i class="fa fa-twitter"></i> </a>
-                     <a href="#"><i class="fa fa-facebook"></i> </a>
-                     <a href="#"><i class="fa fa-instagram"></i> </a>
-                  </div>
+                            <!-- <a href="#"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a> -->
+                            <a href="https://www.facebook.com/aplustudents"><i class="fa fa-facebook"></i> </a>
+                            <!-- <a href="#"><i class="fa fa fa-youtube"></i></a> -->
+                            <a href="https://www.linkedin.com/in/Aplus-students"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://twitter.com/aplus_students"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/studentsaplus/"><i class="fa fa-instagram"></i> </a>
+                            <a href=" https://plus.google.com/100139132828254137034"><i class="fa fa-google-plus-g"></i> </a>
+               </div>
 
              </div>
              <div class="col col_small">
@@ -258,7 +276,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                 </ul>
 
              </div>
-             <div class="col">
+             <!-- <div class="col">
                  <h4>Recent Posts</h4>
                <div class="little_post">
                   <div class="pic">
@@ -296,22 +314,22 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                      <h5>Creativity and Inspiration</h5>
                   </div>
                </div>
-             </div>
+             </div> -->
 
              <div class="col">
              <h4>Have a Questions?</h4>
                 <div class="cont_fields">
                      <div>
                         <i class="icon fa fa-map marker"></i>
-                        <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
+                        <p>27 - 161 Bay St, Toronto, Ontario M5J 1C4</p>
                      </div>
                       <div>
                         <i class="icon fa fa-phone"></i>
-                        <a href="tel:+23923929210"> +2 392 3929 210</a>
+                        <a href="tel:9054604834"> 905-460-4834</a>
                      </div>
                       <div>
                         <i class="icon fa fa-paper-plane"></i>
-                       <a href="tel:+23923929210"> info@yourdomain.com</a>
+                       <a href="mailto:admin@aplustudents.com ">  admin@aplustudents.com </a>
                      </div>
                 </div>
              </div>

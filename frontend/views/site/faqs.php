@@ -11,12 +11,13 @@ $this->title = Yii::t("frontend", "FAQ's");
                   <div class="content">
                      <h4>Home <i class="fa fa-chevron-right"></i> <?php echo Html::encode($this->title) ?></h4>
                      <h1>FAQ's </h1>
-                      
+                    
                   </div>
                </div>
                 
             </div>
          </div>
+         <img src="/frontend/web/images/inner-banner2.webp" alt="" class="bg_image">
       </div>
 <!-- Inner Banner -->
 
@@ -70,17 +71,19 @@ $this->title = Yii::t("frontend", "FAQ's");
                                 They can even strengthen any weak areas from previous grades to get a full understanding of all concepts.</p></div>
                             </div>
                         </div>
+
                         <div class="accordion-item">
-                            <h4 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <h4 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
                                 How can I track my child's progress
                             </button>
                             </h4>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body"><p>Through our advanced analytical tools, we provide daily and weekly reports dircectly to the parents. Futhermore, 
                                 the families can connect with our teachers to get a direct report of the child's progress and performance.</p></div>
                             </div>
                         </div>
+                        
                     </div>
           
                 <div class="bottom_content">
@@ -115,19 +118,20 @@ $this->title = Yii::t("frontend", "FAQ's");
                             </div>
                             <div class="text">
                             <span>Call Us</span>
-                            <strong>+2 392 3929 210</strong>
+                            <strong>905-460-4834</strong>
                             </div>
-                            <a href="tel:+23923929210">test</a>
+                            <a href="tel:9054604834">test</a>
                         </div>
 
                         <div class="social_icons">
-                        <!-- <a href="#"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a> -->
-                        <a href="#"><i class="fa fa-facebook"></i> </a>
-                        <a href="#"><i class="fa fa fa-youtube"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i> </a>
-                        <a href="#"><i class="fa fa-dribbble"></i> </a>
-                        
-                    </div>
+                            <!-- <a href="#"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a> -->
+                            <a href="https://www.facebook.com/aplustudents"><i class="fa fa-facebook"></i> </a>
+                            <!-- <a href="#"><i class="fa fa fa-youtube"></i></a> -->
+                            <a href="https://www.linkedin.com/in/Aplus-students"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://twitter.com/aplus_students"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/studentsaplus/"><i class="fa fa-instagram"></i> </a>
+                            <a href=" https://plus.google.com/100139132828254137034"><i class="fa fa-google-plus-g"></i> </a>
+                        </div>
                     </div>    
 
                 </div>
@@ -136,7 +140,7 @@ $this->title = Yii::t("frontend", "FAQ's");
                     <div class="content">
                     <h3>We are here to answer any questions you may have</h3>
                     <p>Below you'll find answers to the most commonly asked questions. If you don't find what you're looking for, 
-                        please contact us at: <a href="tel:+23923929210">+2 392 3929 210</a></p>
+                        please contact us at: <a href="tel:9054604834">905-460-4834</a></p>
                     </div>
                 </div> 
             </div>

@@ -17,6 +17,7 @@ $this->title = Yii::t('frontend', 'About us');
                 
             </div>
          </div>
+         <img src="/frontend/web/images/inner_banner4.webp" alt="" class="bg_image">
       </div>
 <!-- Inner Banner -->
 
