@@ -41,7 +41,7 @@ $this->title = Yii::$app->name;
             <div class="row">
                <div class="col-md-6 align-items-center">
                   <div class="image">
-                     <img src="/frontend/web/images/weare.jpg" alt="">
+                     <img src="/images/weare.jpg" alt="">
                   </div>
                </div>
                <div class="col-md-6 right_parent">
@@ -50,7 +50,7 @@ $this->title = Yii::$app->name;
                      <h1>We are with you throughout the entire journey!</h1>
                      <div class="about_box">
                         <div class="icon">
-                           <img src="/frontend/web/images/online-learning.png">
+                           <img src="/images/online-learning.png">
                         </div>
                         <div class="content">
                            <h4>Step 1</h4>
@@ -59,7 +59,7 @@ $this->title = Yii::$app->name;
                      </div>
                      <div class="about_box">
                         <div class="icon">
-                           <img src="/frontend/web/images/certificate.png">
+                           <img src="/images/certificate.png">
                         </div>
                         <div class="content">
                            <h4>Step 2 </h4>
@@ -68,7 +68,7 @@ $this->title = Yii::$app->name;
                      </div>
                      <div class="about_box">
                         <div class="icon">
-                           <img src="/frontend/web/images/scientist.png">
+                           <img src="/images/scientist.png">
                         </div>
                         <div class="content">
                            <h4>Step 3</h4>
@@ -88,7 +88,7 @@ $this->title = Yii::$app->name;
                         <h4>Looking for education solutions? Join 13,000 students in your city using  A+ Students</h4>
                   </div>
                   <div class="right_col">
-                        <a href="http://yii2/frontend/web/site/about">Explore A+ Students <i class="fa fa-chevron-right"></i></a>
+                        <a href="http://yii2/site/about">Explore A+ Students <i class="fa fa-chevron-right"></i></a>
                    </div>
                </div>
          </div>
@@ -102,7 +102,7 @@ $this->title = Yii::$app->name;
 
                <div class="main">
                   <div class="box">
-                        <img src="/frontend/web/images/own-pace.jpg">
+                        <img src="/images/own-pace.jpg">
                         <div class="content">
                            <h4>Study at your own pace</h4>
                            <p>Whether your goal is to catch up or get ahead, you can study at your own pace, 
@@ -112,7 +112,7 @@ $this->title = Yii::$app->name;
 
                   </div>
                   <div class="box">
-                        <img src="/frontend/web/images/own-pace1.jpg">
+                        <img src="/images/own-pace1.jpg">
                         <div class="content">
                            <h4>Customized learning</h4>
                            <p>Daily lessons, tutorials, homework and tests based on material directly linked to the child's classroom.</p>
@@ -122,7 +122,7 @@ $this->title = Yii::$app->name;
 
                   </div>
                   <div class="box">
-                        <img src="/frontend/web/images/own-pace2.jpg">
+                        <img src="/images/own-pace2.jpg">
                          <div class="content">
                            <h4>Online classes</h4>
                            <p>1-on-1 tutoring from highly qualified teachers. Over 40 years of experience in personalized learning for Grades KG - 12.</p>
@@ -132,7 +132,7 @@ $this->title = Yii::$app->name;
 
                   </div>
                   <div class="box">
-                  <img src="/frontend/web/images/own-pace3.jpg">
+                  <img src="/images/own-pace3.jpg">
                      <div class="content">
                         <h4>Convenience</h4>
                            <p>Get homework help, test prep and access to hundreds of textbooks, workbooks and printable material to practice Math and English.</p>
@@ -176,7 +176,7 @@ $this->title = Yii::$app->name;
                      <div class="box">
                         <div class="main">
                            <div class="icon">
-                                 <img src="/frontend/web/images/engineer.png">
+                                 <img src="/images/engineer.png">
                            </div>
                            <div class="content">
                               <h4>Introducing to Programming with WordPress </h4>
@@ -190,7 +190,7 @@ $this->title = Yii::$app->name;
                               </p>
 
                               <div class="author">
-                                 <img src="/frontend/web/images/author.webp">
+                                 <img src="/images/author.webp">
                                  <span>by John Smith</span>
                               </div>
                               <p class="lectures"><a href="#">50 lectures (190 hrs)</a></p>
@@ -205,7 +205,7 @@ $this->title = Yii::$app->name;
                      <div class="box">
                         <div class="main">
                            <div class="icon">
-                                 <img src="/frontend/web/images/engineer.png">
+                                 <img src="/images/engineer.png">
                            </div>
                            <div class="content">
                               <h4>Introducing to Programming with WordPress </h4>
@@ -219,7 +219,7 @@ $this->title = Yii::$app->name;
                               </p>
 
                               <div class="author">
-                                 <img src="/frontend/web/images/author.webp">
+                                 <img src="/images/author.webp">
                                  <span>by John Smith</span>
                               </div>
                               <p class="lectures"><a href="#">50 lectures (190 hrs)</a></p>
@@ -234,7 +234,7 @@ $this->title = Yii::$app->name;
                      <div class="box">
                         <div class="main">
                            <div class="icon">
-                                 <img src="/frontend/web/images/engineer.png">
+                                 <img src="/images/engineer.png">
                            </div>
                            <div class="content">
                               <h4>Introducing to Programming with WordPress </h4>
@@ -248,7 +248,7 @@ $this->title = Yii::$app->name;
                               </p>
 
                               <div class="author">
-                                 <img src="/frontend/web/images/author.webp">
+                                 <img src="/images/author.webp">
                                  <span>by John Smith</span>
                               </div>
                               <p class="lectures"><a href="#">50 lectures (190 hrs)</a></p>
@@ -262,7 +262,7 @@ $this->title = Yii::$app->name;
                      <div class="box">
                         <div class="main">
                            <div class="icon">
-                                 <img src="/frontend/web/images/engineer.png">
+                                 <img src="/images/engineer.png">
                            </div>
                            <div class="content">
                               <h4>Introducing to Programming with WordPress </h4>
@@ -276,7 +276,7 @@ $this->title = Yii::$app->name;
                               </p>
 
                               <div class="author">
-                                 <img src="/frontend/web/images/author.webp">
+                                 <img src="/images/author.webp">
                                  <span>by John Smith</span>
                               </div>
                               <p class="lectures"><a href="#">50 lectures (190 hrs)</a></p>
@@ -307,84 +307,84 @@ $this->title = Yii::$app->name;
                   <div class="main">
                         <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>UI/UX Design Courses</h5>
                               <span> 25 Courses</span>
                         </a>
                         <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Art & Design</h5>
                               <span> 25 Courses</span>
                         </a>
                          <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Computer Science</h5>
                               <span> 10 Courses</span>
                         </a>
                          <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>History & Archeologic</h5>
                               <span> 25 Courses</span>
                         </a>
                          <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Software Engineering</h5>
                               <span> 25 Courses</span>
                         </a>
                          <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Information Software</h5>
                               <span> 25 Courses</span>
                         </a>
                          <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Health & Fitness</h5>
                               <span> 25 Courses</span>
                         </a>
                          <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Marketing</h5>
                               <span> 25 Courses</span>
                         </a>
                         <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Graphic Design</h5>
                               <span> 25 Courses</span>
                         </a>
                         <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Music</h5>
                               <span> 25 Courses</span>
                         </a>
                          <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Business Administration</h5>
                               <span> 25 Courses</span>
                         </a>
                          <a href="#" class="box">
                                <div class="icon">
-                                 <img src="/frontend/web/images/scientist.png">
+                                 <img src="/images/scientist.png">
                                </div>
                               <h5>Web Management</h5>
                               <span> 25 Courses</span>
@@ -403,7 +403,7 @@ $this->title = Yii::$app->name;
                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                   <div class="box">
                      <div class="icon">
-                        <img src="/frontend/web/images/scientist-white.png">
+                        <img src="/images/scientist-white.png">
                      </div>
                      <div class="content">
                         <h2><span class="count">3000</span></h2>
@@ -414,7 +414,7 @@ $this->title = Yii::$app->name;
                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                   <div class="box">
                      <div class="icon">
-                        <img src="/frontend/web/images/scientist-white.png">
+                        <img src="/images/scientist-white.png">
                      </div>
                      <div class="content">
                         <h2><span class="count">320</span></h2>
@@ -425,7 +425,7 @@ $this->title = Yii::$app->name;
                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                   <div class="box">
                      <div class="icon">
-                        <img src="/frontend/web/images/scientist-white.png">
+                        <img src="/images/scientist-white.png">
                      </div>
                      <div class="content">
                         <h2><span class="count">1000</span></h2>
@@ -436,7 +436,7 @@ $this->title = Yii::$app->name;
                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                   <div class="box">
                      <div class="icon">
-                        <img src="/frontend/web/images/scientist-white.png">
+                        <img src="/images/scientist-white.png">
                      </div>
                      <div class="content">
                         <h2><span class="count">587</span></h2>
@@ -460,7 +460,7 @@ $this->title = Yii::$app->name;
                         <div class="box">
                            <div class="author">
                               <div class="pic">
-                                 <img src="/frontend/web/images/RogerScott.webp">
+                                 <img src="/images/RogerScott.webp">
                                  <i class="fa fa-quote-left"></i>
                               </div>
                               <div class="name">
@@ -475,7 +475,7 @@ $this->title = Yii::$app->name;
                          <div class="box">
                            <div class="author">
                               <div class="pic">
-                                 <img src="/frontend/web/images/RogerScott2.webp">
+                                 <img src="/images/RogerScott2.webp">
                                  <i class="fa fa-quote-left"></i>
                               </div>
                               <div class="name">
@@ -490,7 +490,7 @@ $this->title = Yii::$app->name;
                          <div class="box">
                            <div class="author">
                               <div class="pic">
-                                 <img src="/frontend/web/images/RogerScott.webp">
+                                 <img src="/images/RogerScott.webp">
                                  <i class="fa fa-quote-left"></i>
                               </div>
                               <div class="name">
@@ -505,7 +505,7 @@ $this->title = Yii::$app->name;
                          <div class="box">
                            <div class="author">
                               <div class="pic">
-                                 <img src="/frontend/web/images/RogerScott2.webp">
+                                 <img src="/images/RogerScott2.webp">
                                  <i class="fa fa-quote-left"></i>
                               </div>
                               <div class="name">
@@ -536,7 +536,7 @@ $this->title = Yii::$app->name;
                <div class="main">
                   <div class="box">
                         <a href="#" class="image">
-                           <img src="/frontend/web/images/blog1.webp">
+                           <img src="/images/blog1.webp">
                         </a>
                         
                         <div class="content">
@@ -551,7 +551,7 @@ $this->title = Yii::$app->name;
                   </div>
                    <div class="box">
                         <a href="#" class="image">
-                           <img src="/frontend/web/images/blog2.webp">
+                           <img src="/images/blog2.webp">
                         </a>
                         
                         <div class="content">
@@ -566,7 +566,7 @@ $this->title = Yii::$app->name;
                   </div>
                    <div class="box">
                         <a href="#" class="image">
-                           <img src="/frontend/web/images/blog3.webp">
+                           <img src="/images/blog3.webp">
                         </a>
                         
                         <div class="content">

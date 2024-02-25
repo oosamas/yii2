@@ -39,7 +39,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                <!-- <div class="col-md dnone_mob">
                   <div class="cont_box ">
                      <div class="icon">
-                        <img src="/frontend/web/images/telephone.png">
+                        <img src="/images/telephone.png">
                      </div>
                      <div class="text">
                         <span>Call Us</span>
@@ -96,10 +96,10 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
            
                   <div class="col-md-2">
                      <!-- <a class="logo" href="<?php //Yii::$app->homeUrl ?>">
-                           <img src="/frontend/web/images/logo-white.webp" alt="">
+                           <img src="/images/logo-white.webp" alt="">
                      </a> -->
-                     <a class="logo" href="/frontend/web/site/index">
-                           <img src="/frontend/web/images/logo-white.webp" alt="">
+                     <a class="logo" href="/site/index">
+                           <img src="/images/logo-white.webp" alt="">
                      </a>
                      
                   </div>      
@@ -227,7 +227,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                   <a class="logo" href="home.html">
                      <!-- Academia
                      <span>Online Education &amp; Learning</span> -->
-                     <img src="/frontend/web/images/logo-black.png" alt="">
+                     <img src="/images/logo-black.png" alt="">
                      
                   </a>
                   <p> With over 15 years and 10 thousand students, we have perfected the concept of online learning.  </p>
@@ -280,7 +280,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                  <h4>Recent Posts</h4>
                <div class="little_post">
                   <div class="pic">
-                     <img src="/frontend/web/images/blog3.webp">
+                     <img src="/images/blog3.webp">
                   </div>
                   <div class="content">
                      <div class="tags">
@@ -292,7 +292,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                </div>
                 <div class="little_post">
                   <div class="pic">
-                     <img src="/frontend/web/images/blog3.webp">
+                     <img src="/images/blog3.webp">
                   </div>
                   <div class="content">
                      <div class="tags">
@@ -304,7 +304,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                </div>
                 <div class="little_post">
                   <div class="pic">
-                     <img src="/frontend/web/images/blog3.webp">
+                     <img src="/images/blog3.webp">
                   </div>
                   <div class="content">
                      <div class="tags">
