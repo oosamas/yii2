@@ -55,9 +55,9 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                                  <a href="https://www.facebook.com/aplustudents"><i class="fa fa-facebook"></i> </a>
                                  <!-- <a href="#"><i class="fa fa fa-youtube"></i></a> -->
                                  <a href="https://www.linkedin.com/in/Aplus-students"><i class="fa fa-linkedin"></i></a>
-                                 <a href="https://twitter.com/aplus_students"><i class="fa fa-twitter"></i></a>
+                                 <!-- <a href="https://twitter.com/aplus_students"><i class="fa fa-twitter"></i></a> -->
                                  <a href="https://www.instagram.com/studentsaplus/"><i class="fa fa-instagram"></i> </a>
-                                 <a href=" https://plus.google.com/100139132828254137034"><i class="fa fa-google-plus-g"></i> </a>
+                                 <!-- <a href=" https://plus.google.com/100139132828254137034"><i class="fa fa-google-plus-g"></i> </a> -->
                      </div>
                   
                </div>
@@ -191,10 +191,12 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
       <!-- header section -->
 </header>
 
+
 <main class="flex-shrink-0" role="main">
     <?php echo $content ?>
 </main>
 
+<!-- footer section -->
 <div class="newsletter">
           <div class="container">
                <div class="row">
@@ -220,7 +222,8 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
           </div>
 </div>
   
-<footer>
+
+<!-- main footer <footer> -->
    <div class="container">
        <div class="parent">
             <div class="col">
@@ -321,7 +324,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
                 <div class="cont_fields">
                      <div>
                         <i class="icon fa fa-map marker"></i>
-                        <p>27 - 161 Bay St, Toronto, Ontario M5J 1C4</p>
+                        <p>161 Bay St, Toronto, Ontario M5J 1C4</p>
                      </div>
                       <div>
                         <i class="icon fa fa-phone"></i>

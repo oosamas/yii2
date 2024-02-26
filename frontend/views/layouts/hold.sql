@@ -1,0 +1,2 @@
+insert INTO lesson_test_options(id, question_id, content, subbject_id, test_id, lesson_id, title, is_clue, is_answer)
+SELECT id,topic_index_question_id, option_value, 1, 1, 1, "Title",0,1   from topic_index_question_optionsIMPORTED
