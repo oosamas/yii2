@@ -10,11 +10,15 @@ use yii\bootstrap4\NavBar;
 use yii\helpers\Html;
 use yii\helpers\Url;
  
+// $cssFile = Url::to('@web/css/style.css');
+// echo Html::cssFile($cssFile, ['depends' => [\yii\bootstrap4\BootstrapAsset::class]]);
+
+
+$this->beginContent('@frontend/views/layouts/_clear.php');
+
 $cssFile = Url::to('@web/css/style.css');
 echo Html::cssFile($cssFile, ['depends' => [\yii\bootstrap4\BootstrapAsset::class]]);
 
-
-$this->beginContent('@frontend/views/layouts/_clear.php')
 ?>
 <header>
     

@@ -28,6 +28,7 @@ class FrontendAsset extends AssetBundle
      */
     public $css = [
         'yii2/frontend/web/css/custom.css',
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
 
         
     ];
