@@ -62,6 +62,14 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+    public function actionAbout()
+    {
+        return $this->render('about');
+    }
+    public function actionFaqs()
+    {
+        return $this->render('faqs');
+    }
 
     /**
      * @return string|Response

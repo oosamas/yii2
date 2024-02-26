@@ -113,16 +113,30 @@ $config = [
     ]
 ];
 
+// if (YII_ENV_DEV) {
+//     $config['modules']['gii'] = [
+//         'class' => yii\gii\Module::class,
+//         'generators' => [
+//             'crud' => [
+//                 'class' => yii\gii\generators\crud\Generator::class,
+//                 'messageCategory' => 'frontend'
+//             ]
+//         ]
+//     ];
+// }
+
 if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
-        'class' => yii\gii\Module::class,
+        'class' => 'yii\gii\Module',
         'generators' => [
             'crud' => [
-                'class' => yii\gii\generators\crud\Generator::class,
+                'class' => 'yii\gii\generators\crud\Generator',
                 'messageCategory' => 'frontend'
-            ]
-        ]
+            ],
+        ],
     ];
 }
+
+
 
 return $config;
