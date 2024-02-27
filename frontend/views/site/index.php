@@ -25,7 +25,7 @@ $this->title = Yii::$app->name;
             <div class="row">
                <div class="col-md-5">
                   <div class="content">
-                     <h4>Reaching for Higher Education</h4>
+                     <h4>Reaching for Higher Education 2</h4>
                      <h1>Structured And Proven Tutoring Program For Grade KG - 12 </h1>
                      <p>With over 15 years and 10 thousand students, we have perfected the concept of online learning. 
                         Utilizing an advanced system that is linked to your child’s curriculum, 
